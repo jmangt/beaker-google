@@ -1,0 +1,1670 @@
+---
+kind: compute#imageList
+id: projects/centos-cloud/global/images
+items:
+- kind: compute#image
+  id: '4568702763004249623'
+  creationTimestamp: '2014-09-04T09:50:19.966-07:00'
+  name: centos-7-v20140903
+  description: CentOS 7.0 x86_64 built on 2014-09-03
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20140924
+  status: READY
+  archiveSizeBytes: '1168167201'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20140903
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '4822681162745636585'
+  creationTimestamp: '2014-09-24T19:57:13.650-07:00'
+  name: centos-7-v20140924
+  description: CentOS 7 x86_64 built on 2014-09-24
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20140926
+  status: READY
+  archiveSizeBytes: '1181699781'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20140924
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '11630347837395986864'
+  creationTimestamp: '2014-09-29T09:29:54.626-07:00'
+  name: centos-7-v20140926
+  description: CentOS 7 x86_64 built on 2014-09-26
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141007
+  status: READY
+  archiveSizeBytes: '1182441174'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20140926
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '13420104487111729570'
+  creationTimestamp: '2014-10-16T14:18:33.905-07:00'
+  name: centos-7-v20141007
+  description: CentOS 7.0 x86_64 built on 2014-10-07
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141016
+  status: READY
+  archiveSizeBytes: '1182982164'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141007
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '4506010319257803087'
+  creationTimestamp: '2014-10-17T16:43:06.539-07:00'
+  name: centos-7-v20141016
+  description: CentOS 7.0 x86_64 built on 2014-10-16
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141021
+  status: READY
+  archiveSizeBytes: '1184558412'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141016
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '4536638025069785573'
+  creationTimestamp: '2014-10-22T18:27:40.851-07:00'
+  name: centos-7-v20141021
+  description: CentOS 7 x86_64 built on 2014-10-21
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141108
+  status: READY
+  archiveSizeBytes: '1183591245'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141021
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '853041310537923411'
+  creationTimestamp: '2014-11-10T14:22:16.416-08:00'
+  name: centos-7-v20141108
+  description: CentOS 7 x86_64 built on 2014-11-08
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141205
+  status: READY
+  archiveSizeBytes: '1192600188'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141108
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '9955643093605856709'
+  creationTimestamp: '2014-12-08T16:35:02.271-08:00'
+  name: centos-7-v20141205
+  description: CentOS 7 x86_64 built on 2014-12-05
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141218
+  status: READY
+  archiveSizeBytes: '1196735889'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141205
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '4809836014772868503'
+  creationTimestamp: '2015-01-05T14:54:47.349-08:00'
+  name: centos-7-v20141218
+  description: CentOS 7 x86_64 built on 2014-12-18
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150127
+  status: READY
+  archiveSizeBytes: '1201145025'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20141218
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '9812507426971718529'
+  creationTimestamp: '2015-01-28T19:19:09.280-08:00'
+  name: centos-7-v20150127
+  description: CentOS 7 x86_64 built on 2015-01-27
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150226
+  status: READY
+  archiveSizeBytes: '1215767874'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150127
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '848743723932840478'
+  creationTimestamp: '2015-03-03T16:08:17.872-08:00'
+  name: centos-7-v20150226
+  description: CentOS 7 x86_64 built on 2015-02-26
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150309
+  status: READY
+  archiveSizeBytes: '1218452391'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150226
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '2060792561539410536'
+  creationTimestamp: '2015-03-10T13:31:03.109-07:00'
+  name: centos-7-v20150309
+  description: CentOS 7 x86_64 built on 2015-03-09
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150325
+  status: READY
+  archiveSizeBytes: '1217676246'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150309
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5754090688068719631'
+  creationTimestamp: '2015-03-27T12:09:20.845-07:00'
+  name: centos-7-v20150325
+  description: CentOS 7 x86_64 built on 2015-03-25
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150423
+  status: READY
+  archiveSizeBytes: '1217929215'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150325
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '6047445488489148610'
+  creationTimestamp: '2015-04-30T13:18:53.201-07:00'
+  name: centos-7-v20150423
+  description: CentOS, CentOS, 7, x86_64 built on 2015-04-23
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150526
+  status: READY
+  archiveSizeBytes: '1183175424'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150423
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '2915201787420707637'
+  creationTimestamp: '2015-05-27T14:23:38.886-07:00'
+  name: centos-7-v20150526
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-05-26
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150603
+  status: READY
+  archiveSizeBytes: '1190907255'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150526
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '1973199963443338581'
+  creationTimestamp: '2015-06-09T10:34:50.314-07:00'
+  name: centos-7-v20150603
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-06-03
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150710
+  status: READY
+  archiveSizeBytes: '1189327374'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150603
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '8297792628255727222'
+  creationTimestamp: '2015-07-13T13:33:29.744-07:00'
+  name: centos-7-v20150710
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-07-10
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150818
+  status: READY
+  archiveSizeBytes: '1200795426'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150710
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '6561876587929023862'
+  creationTimestamp: '2015-08-24T14:24:41.898-07:00'
+  name: centos-7-v20150818
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-08-18
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150915
+  status: READY
+  archiveSizeBytes: '1207581579'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150818
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5779912740115484003'
+  creationTimestamp: '2015-09-17T14:41:32.614-07:00'
+  name: centos-7-v20150915
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-09-15
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150929
+  status: READY
+  archiveSizeBytes: '1211968149'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150915
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '7716058656801393790'
+  creationTimestamp: '2015-10-06T13:44:01.187-07:00'
+  name: centos-7-v20150929
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-09-29
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20151104
+  status: READY
+  archiveSizeBytes: '1617065807'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20150929
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '8838584153871781432'
+  creationTimestamp: '2015-11-09T15:48:39.859-08:00'
+  name: centos-7-v20151104
+  description: CentOS, CentOS, 7.1.1503, x86_64 built on 2015-11-04
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160119
+  status: READY
+  archiveSizeBytes: '1626537155'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20151104
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '8660497917661064586'
+  creationTimestamp: '2016-01-19T20:56:05.273-08:00'
+  name: centos-7-v20160119
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-01-19
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160126
+  status: READY
+  archiveSizeBytes: '1640721499'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160119
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5025100056290980886'
+  creationTimestamp: '2016-01-27T14:55:53.533-08:00'
+  name: centos-7-v20160126
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-01-26
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160211
+  status: READY
+  archiveSizeBytes: '1641768043'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160126
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '54163706009799829'
+  creationTimestamp: '2016-02-16T11:03:22.399-08:00'
+  name: centos-7-v20160211
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-02-11
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160216
+  status: READY
+  archiveSizeBytes: '1644778227'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160211
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5307226326143956207'
+  creationTimestamp: '2016-02-17T11:29:04.712-08:00'
+  name: centos-7-v20160216
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-02-16
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160219
+  status: READY
+  archiveSizeBytes: '1645431659'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160216
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '117817058366250736'
+  creationTimestamp: '2016-02-22T11:23:11.288-08:00'
+  name: centos-7-v20160219
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-02-19
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160301
+  status: READY
+  archiveSizeBytes: '1645444919'
+  diskSizeGb: '10'
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160219
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '3677031631651851296'
+  creationTimestamp: '2016-03-01T20:57:51.795-08:00'
+  name: centos-7-v20160301
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-03-01
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160329
+  status: READY
+  archiveSizeBytes: '1645295467'
+  diskSizeGb: '10'
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160301
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5059873404309583251'
+  creationTimestamp: '2016-03-30T10:23:08.878-07:00'
+  name: centos-7-v20160329
+  description: CentOS, CentOS, 7.2.1511, x86_64 built on 2016-03-29
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160418
+  status: READY
+  archiveSizeBytes: '1646339675'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160329
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '2898231190483621856'
+  creationTimestamp: '2016-04-19T10:21:19.403-07:00'
+  name: centos-7-v20160418
+  description: CentOS, CentOS, 7, x86_64 built on 2016-04-18
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160511
+  status: READY
+  archiveSizeBytes: '1690218283'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160418
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5721431653635153993'
+  creationTimestamp: '2016-05-12T12:51:02.587-07:00'
+  name: centos-7-v20160511
+  description: CentOS, CentOS, 7, x86_64 built on 2016-05-11
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160606
+  status: READY
+  archiveSizeBytes: '1690475303'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160511
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '1889620002910747979'
+  creationTimestamp: '2016-06-09T17:02:44.099-07:00'
+  name: centos-7-v20160606
+  description: CentOS, CentOS, 7, x86_64 built on 2016-06-06
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160629
+  status: READY
+  archiveSizeBytes: '2814828983'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160606
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '2745708994769844877'
+  creationTimestamp: '2016-06-29T14:57:54.595-07:00'
+  name: centos-7-v20160629
+  description: CentOS, CentOS, 7, x86_64 built on 2016-06-29
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160711
+  status: READY
+  archiveSizeBytes: '2847054883'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160629
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '1396713101988499085'
+  creationTimestamp: '2016-07-12T11:01:06.332-07:00'
+  name: centos-7-v20160711
+  description: CentOS, CentOS, 7, x86_64 built on 2016-07-11
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160718
+  status: READY
+  archiveSizeBytes: '2829030891'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160711
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '1351690450177672234'
+  creationTimestamp: '2016-07-18T17:56:37.633-07:00'
+  name: centos-7-v20160718
+  description: CentOS, CentOS, 7, x86_64 built on 2016-07-18
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160803
+  status: READY
+  archiveSizeBytes: '2826321723'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160718
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '7502263907890640569'
+  creationTimestamp: '2016-08-04T11:24:22.175-07:00'
+  name: centos-7-v20160803
+  description: CentOS, CentOS, 7, x86_64 built on 2016-08-03
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160921
+  status: READY
+  archiveSizeBytes: '3534289944'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160803
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '3345701383252326214'
+  creationTimestamp: '2016-09-22T09:41:13.610-07:00'
+  name: centos-7-v20160921
+  description: CentOS, CentOS, 7, x86_64 built on 2016-09-21
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161025
+  status: READY
+  archiveSizeBytes: '3601115289'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20160921
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '5235113928293489857'
+  creationTimestamp: '2016-10-25T11:19:26.250-07:00'
+  name: centos-7-v20161025
+  description: CentOS, CentOS, 7, x86_64 built on 2016-10-25
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161027
+  status: READY
+  archiveSizeBytes: '4356848832'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161025
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '4534636931622894250'
+  creationTimestamp: '2016-10-27T11:15:33.312-07:00'
+  name: centos-7-v20161027
+  description: CentOS, CentOS, 7, x86_64 built on 2016-10-27
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161129
+  status: READY
+  archiveSizeBytes: '4319037810'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161027
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '8628576586818627004'
+  creationTimestamp: '2016-11-29T16:20:35.171-08:00'
+  name: centos-7-v20161129
+  description: CentOS, CentOS, 7, x86_64 built on 2016-11-29
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161212
+  status: READY
+  archiveSizeBytes: '4319033076'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161129
+  labelFingerprint: 42WmSpB8rSM=
+- kind: compute#image
+  id: '8650499281020268919'
+  creationTimestamp: '2016-12-14T10:29:44.741-08:00'
+  name: centos-7-v20161212
+  description: CentOS, CentOS, 7, x86_64 built on 2016-12-12
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170110
+  status: READY
+  archiveSizeBytes: '4491098988'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20161212
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '6699622773219337753'
+  creationTimestamp: '2017-01-11T12:43:34.658-08:00'
+  name: centos-7-v20170110
+  description: CentOS, CentOS, 7, x86_64 built on 2017-01-10
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170124
+  status: READY
+  archiveSizeBytes: '4537193190'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170110
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '3033065083021971804'
+  creationTimestamp: '2017-01-24T16:22:11.779-08:00'
+  name: centos-7-v20170124
+  description: CentOS, CentOS, 7, x86_64 built on 2017-01-24
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170223
+  status: READY
+  archiveSizeBytes: '4698721914'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170124
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '6769386339310909737'
+  creationTimestamp: '2017-02-23T17:09:26.516-08:00'
+  name: centos-7-v20170223
+  description: CentOS, CentOS, 7, x86_64 built on 2017-02-23
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170227
+  status: READY
+  archiveSizeBytes: '4706733012'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170223
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4890196529355931002'
+  creationTimestamp: '2017-02-28T15:11:17.984-08:00'
+  name: centos-7-v20170227
+  description: CentOS, CentOS, 7, x86_64 built on 2017-02-27
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170327
+  status: READY
+  archiveSizeBytes: '4835969526'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170227
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '447698369464728900'
+  creationTimestamp: '2017-03-28T13:12:27.756-07:00'
+  name: centos-7-v20170327
+  description: CentOS, CentOS, 7, x86_64 built on 2017-03-27
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170426
+  status: READY
+  archiveSizeBytes: '4621606560'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170327
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '5992902547674756879'
+  creationTimestamp: '2017-04-27T12:43:28.666-07:00'
+  name: centos-7-v20170426
+  description: CentOS, CentOS, 7, x86_64 built on 2017-04-26
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170523
+  status: READY
+  archiveSizeBytes: '5620418746'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170426
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '8171633968241181019'
+  creationTimestamp: '2017-05-24T10:15:32.130-07:00'
+  name: centos-7-v20170523
+  description: CentOS, CentOS, 7, x86_64 built on 2017-05-23
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170616
+  status: READY
+  archiveSizeBytes: '6400686020'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170523
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '3466558228180352098'
+  creationTimestamp: '2017-06-19T09:57:49.783-07:00'
+  name: centos-7-v20170616
+  description: CentOS, CentOS, 7, x86_64 built on 2017-06-16
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170620
+  status: READY
+  archiveSizeBytes: '7233122067'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170616
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '5221862210449711470'
+  creationTimestamp: '2017-06-20T15:19:45.383-07:00'
+  name: centos-7-v20170620
+  description: CentOS, CentOS, 7, x86_64 built on 2017-06-20
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170717
+  status: READY
+  archiveSizeBytes: '8041135164'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170620
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4829074772484947680'
+  creationTimestamp: '2017-07-18T10:06:23.083-07:00'
+  name: centos-7-v20170717
+  description: CentOS, CentOS, 7, x86_64 built on 2017-07-17
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170719
+  status: READY
+  archiveSizeBytes: '6562137624'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170717
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '9168785680564903962'
+  creationTimestamp: '2017-07-19T15:36:37.572-07:00'
+  name: centos-7-v20170719
+  description: CentOS, CentOS, 7, x86_64 built on 2017-07-19
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170816
+  status: READY
+  archiveSizeBytes: '6582061054'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170719
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '954560959160536305'
+  creationTimestamp: '2017-08-17T12:44:30.189-07:00'
+  name: centos-7-v20170816
+  description: CentOS, CentOS, 7, x86_64 built on 2017-08-16
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170829
+  status: READY
+  archiveSizeBytes: '7570296512'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170816
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4960063913426897282'
+  creationTimestamp: '2017-08-30T10:35:41.988-07:00'
+  name: centos-7-v20170829
+  description: CentOS, CentOS, 7, x86_64 built on 2017-08-29
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170918
+  status: READY
+  archiveSizeBytes: '7542367336'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170829
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '5203558034783920875'
+  creationTimestamp: '2017-09-19T11:03:48.980-07:00'
+  name: centos-7-v20170918
+  description: CentOS, CentOS, 7, x86_64 built on 2017-09-18
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171003
+  status: READY
+  archiveSizeBytes: '10292442624'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20170918
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '8193040493265699771'
+  creationTimestamp: '2017-10-03T14:12:53.221-07:00'
+  name: centos-7-v20171003
+  description: CentOS, CentOS, 7, x86_64 built on 2017-10-03
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171018
+  status: READY
+  archiveSizeBytes: '10037548032'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171003
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '2177691284838583782'
+  creationTimestamp: '2017-10-19T16:19:37.966-07:00'
+  name: centos-7-v20171018
+  description: CentOS, CentOS, 7, x86_64 built on 2017-10-18
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171025
+  status: READY
+  archiveSizeBytes: '10160167680'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171018
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '5631027483984767623'
+  creationTimestamp: '2017-10-26T09:59:20.905-07:00'
+  name: centos-7-v20171025
+  description: CentOS, CentOS, 7, x86_64 built on 2017-10-25
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171129
+  status: READY
+  archiveSizeBytes: '9986757120'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171025
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4704976489891622820'
+  creationTimestamp: '2017-11-30T10:43:23.704-08:00'
+  name: centos-7-v20171129
+  description: CentOS, CentOS, 7, x86_64 built on 2017-11-29
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171213
+  status: READY
+  archiveSizeBytes: '11045825024'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171129
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4705912019669156903'
+  creationTimestamp: '2017-12-14T09:54:16.683-08:00'
+  name: centos-7-v20171213
+  description: CentOS, CentOS, 7, x86_64 built on 2017-12-13
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180104
+  status: READY
+  archiveSizeBytes: '10714262208'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20171213
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4512789218935907733'
+  creationTimestamp: '2018-01-04T13:24:10.946-08:00'
+  name: centos-7-v20180104
+  description: CentOS, CentOS, 7, x86_64 built on 2018-01-04
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180129
+  status: READY
+  archiveSizeBytes: '10036146432'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180104
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '1315952345063688141'
+  creationTimestamp: '2018-01-30T10:27:46.590-08:00'
+  name: centos-7-v20180129
+  description: CentOS, CentOS, 7, x86_64 built on v20180129
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180227
+  status: READY
+  archiveSizeBytes: '10664624640'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180129
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '440291406266792112'
+  creationTimestamp: '2018-03-05T14:36:15.482-08:00'
+  name: centos-7-v20180227
+  description: CentOS, CentOS, 7, x86_64 built on 20180227
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180314
+  status: READY
+  archiveSizeBytes: '11114138880'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180227
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '668558558585307299'
+  creationTimestamp: '2018-03-16T10:26:37.137-07:00'
+  name: centos-7-v20180314
+  description: CentOS, CentOS, 7, x86_64 built on 20180314
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180401
+  status: READY
+  archiveSizeBytes: '11646105600'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180314
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '2113153890725426135'
+  creationTimestamp: '2018-04-01T23:27:04.843-07:00'
+  name: centos-7-v20180401
+  description: CentOS, CentOS, 7, x86_64 built on 20180401
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180507
+  status: READY
+  archiveSizeBytes: '11591208960'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180401
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '3730693017403483732'
+  creationTimestamp: '2018-05-07T15:52:44.143-07:00'
+  name: centos-7-v20180507
+  description: CentOS, CentOS, 7, x86_64 built on 20180507
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180510
+  status: READY
+  archiveSizeBytes: '11356750080'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180507
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '7713210638144157385'
+  creationTimestamp: '2018-05-10T20:04:06.766-07:00'
+  name: centos-7-v20180510
+  description: CentOS, CentOS, 7, x86_64 built on 20180510
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180514
+  status: READY
+  archiveSizeBytes: '12794016000'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180510
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '1122306404415615853'
+  creationTimestamp: '2018-05-15T09:40:34.636-07:00'
+  name: centos-7-v20180514
+  description: CentOS, CentOS, 7, x86_64 built on 20180514
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180516
+  status: READY
+  archiveSizeBytes: '13058626560'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180514
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '1552019218114807117'
+  creationTimestamp: '2018-05-17T10:28:03.048-07:00'
+  name: centos-7-v20180516
+  description: CentOS, CentOS, 7, x86_64 built on 20180516
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180523
+  status: READY
+  archiveSizeBytes: '10487969280'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180516
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '765027990847049478'
+  creationTimestamp: '2018-05-24T10:10:02.237-07:00'
+  name: centos-7-v20180523
+  description: CentOS, CentOS, 7, x86_64 built on 20180523
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180611
+  status: READY
+  archiveSizeBytes: '10842627840'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180523
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '3455983494672259552'
+  creationTimestamp: '2018-06-12T13:03:28.502-07:00'
+  name: centos-7-v20180611
+  description: CentOS, CentOS, 7, x86_64 built on 20180611
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180716
+  status: READY
+  archiveSizeBytes: '12726525952'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180611
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4998083998998830967'
+  creationTimestamp: '2018-07-17T10:04:24.974-07:00'
+  name: centos-7-v20180716
+  description: CentOS, CentOS, 7, x86_64 built on 20180716
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180815
+  status: READY
+  archiveSizeBytes: '13890626560'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180716
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '247249140488674713'
+  creationTimestamp: '2018-08-15T15:04:38.979-07:00'
+  name: centos-7-v20180815
+  description: CentOS, CentOS, 7, x86_64 built on 20180815
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180911
+  status: READY
+  archiveSizeBytes: '14045379328'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180815
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '697678136224312223'
+  creationTimestamp: '2018-09-12T11:05:37.275-07:00'
+  name: centos-7-v20180911
+  description: CentOS, CentOS, 7, x86_64 built on 20180911
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181009
+  status: READY
+  archiveSizeBytes: '14260733696'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20180911
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '992041334830503956'
+  creationTimestamp: '2018-10-10T09:21:16.209-07:00'
+  name: centos-7-v20181009
+  description: CentOS, CentOS, 7, x86_64 built on 20181009
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181011
+  status: READY
+  archiveSizeBytes: '14250436864'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181009
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4463797450411506948'
+  creationTimestamp: '2018-10-11T14:43:08.271-07:00'
+  name: centos-7-v20181011
+  description: CentOS, CentOS, 7, x86_64 built on 20181011
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181113
+  status: READY
+  archiveSizeBytes: '14252887040'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181011
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '2322694281275495301'
+  creationTimestamp: '2018-11-14T10:46:03.410-08:00'
+  name: centos-7-v20181113
+  description: CentOS, CentOS, 7, x86_64 built on 20181113
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181210
+  status: READY
+  archiveSizeBytes: '15120165888'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181113
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '1665086255083439739'
+  creationTimestamp: '2018-12-11T09:49:09.195-08:00'
+  name: centos-7-v20181210
+  description: CentOS, CentOS, 7, x86_64 built on 20181210
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190116
+  status: READY
+  archiveSizeBytes: '13212393984'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20181210
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4739848819688210554'
+  creationTimestamp: '2019-01-16T15:30:30.362-08:00'
+  name: centos-7-v20190116
+  description: CentOS, CentOS, 7, x86_64 built on 20190116
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190213
+  status: READY
+  archiveSizeBytes: '13324299264'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190116
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '1443558997373752891'
+  creationTimestamp: '2019-02-14T09:43:48.963-08:00'
+  name: centos-7-v20190213
+  description: CentOS, CentOS, 7, x86_64 built on 20190213
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190312
+  status: READY
+  archiveSizeBytes: '14320023552'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190213
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '3780108136525169178'
+  creationTimestamp: '2019-03-12T16:12:54.021-07:00'
+  name: centos-7-v20190312
+  description: CentOS, CentOS, 7, x86_64 built on 20190312
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190326
+  status: READY
+  archiveSizeBytes: '14810772992'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190312
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '2112416642372079598'
+  creationTimestamp: '2019-03-27T10:21:05.578-07:00'
+  name: centos-7-v20190326
+  description: CentOS, CentOS, 7, x86_64 built on 20190326
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190423
+  status: READY
+  archiveSizeBytes: '15084980992'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190326
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '2708810187570071429'
+  creationTimestamp: '2019-04-23T13:45:31.047-07:00'
+  name: centos-7-v20190423
+  description: CentOS, CentOS, 7, x86_64 built on 20190423
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  deprecated:
+    state: DEPRECATED
+    replacement: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190515
+  status: READY
+  archiveSizeBytes: '16314480640'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190423
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+- kind: compute#image
+  id: '4658005417542122143'
+  creationTimestamp: '2019-05-15T19:01:21.060-07:00'
+  name: centos-7-v20190515
+  description: CentOS, CentOS, 7, x86_64 built on 20190515
+  sourceType: RAW
+  rawDisk:
+    source: ''
+    containerType: TAR
+  status: READY
+  archiveSizeBytes: '16469314560'
+  diskSizeGb: '10'
+  licenses:
+  - https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7
+  family: centos-7
+  selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20190515
+  labelFingerprint: 42WmSpB8rSM=
+  licenseCodes:
+  - '1000207'
+selfLink: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images

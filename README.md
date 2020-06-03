@@ -24,11 +24,26 @@ As of Beaker 4.0, all hypervisor and DSL extension libraries have been removed a
 ~~~ruby
 # Gemfile
 gem 'beaker', '~>4.0'
-gem 'beaker-aws'
+gem 'beaker-google'
 # project.gemspec
 s.add_runtime_dependency 'beaker', '~>4.0'
-s.add_runtime_dependency 'beaker-aws'
+s.add_runtime_dependency 'beaker-google'
 ~~~
+
+# Spec tests
+
+Spec test live under the `spec` folder. There are the default rake task and therefore can run with a simple command:
+```bash
+bundle exec rake test:spec
+```
+
+
+# Acceptance tests
+
+We run beaker's base acceptance tests with this library to see if the hypervisor is working with beaker. There is a simple rake task to invoke acceptance test for the library:
+```bash
+bundle exec rake test:acceptance
+```
 
 In Beaker's next major version, the requirement for `beaker-google` will be
 pulled from that repo. When that happens, then the usage pattern will change.

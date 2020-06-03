@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-highmem-2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Beaker/3.37.0 google-api-ruby-client/0.8.7 Mac OS X/10.14.5 (gzip)
+      Accept-Encoding:
+      - gzip
+      Content-Type:
+      - ''
+      Authorization:
+      - Bearer ya29.c.EloqB3d6dzhM-t6gGYNSP-PPGraK0aRPoTstYND8b7Y463KwEF94ORS3py12IJQuojLx7QTqZA0tgA5w5eiyczF1fuBiT-cgqMzsqWcL19IKaE_7zFbhZWGIQkM
+      Cache-Control:
+      - no-store
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Mon, 17 Jun 2019 22:06:46 GMT
+      Date:
+      - Mon, 17 Jun 2019 22:06:46 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"ku71xbaBLnDcPFNlRfx8GtZNirE=/L360SPT95Et2F_6hAl0MTm7MVKg="'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,44,43,39"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAHWRTW7CMBCF95wiSrcY24mIgF1LJTZFQoUewIQhcRP/yONAoerda5tWalVV8sIz3/N79vh9lOWd1Id8keW1UXbwcKdE3UoNu4uFfBy4THTKWJHK2oHw0uidVIBeKBspn1dzwgtS8h2vFoyFNWGMETYLu3RMCwVRqTlpZdMqUOTmdwCsnbTRMvIiOy03LzjOeJmtHrLn+3VSNUMIW9oBg6aIjWBg3GW9DzUvS556UokGtlbUsEp9loTiTapBbcChRA/aP0rsog0vZv/zrbzeTPJqOi2rdIer0ekJA5I66JzoORGJIPTHJ6m7SFvvLS4oPZ/Pk8aYpgdhJU7CdOnXhOmJU+vMK9Qe6R5EB458o5iB9FcC/fEhSP/MT+K2FQ4OYTgh/ih6hNHH6BPO+FjB2QEAAA==
+    http_version: 
+  recorded_at: Mon, 17 Jun 2019 22:06:46 GMT
+recorded_with: VCR 5.0.0

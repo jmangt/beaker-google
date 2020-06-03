@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 require 'time'
 
 module Beaker
-
   # Beaker support for the Google Compute Engine.
   class GoogleCompute < Beaker::Hypervisor
-
     SLEEPWAIT = 5
 
     # Hours before an instance is considered a zombie
@@ -14,23 +14,20 @@ module Beaker
     def find_google_ssh_public_key
       keyfile = ENV.fetch('BEAKER_gce_ssh_public_key', File.join(ENV['HOME'], '.ssh', 'google_compute_engine.pub'))
 
-      if @options[:gce_ssh_public_key] && !File.exist?(keyfile)
-        keyfile = @options[:gce_ssh_public_key]
-      end
+      keyfile = @options[:gce_ssh_public_key] if @options[:gce_ssh_public_key] && !File.exist?(keyfile)
 
       raise("Could not find GCE Public SSH Key at '#{keyfile}'") unless File.exist?(keyfile)
 
-      return keyfile
+      keyfile
     end
 
     # Create the array of metaData, each member being a hash with a :key and a
     # :value.  Sets :department, :project and :jenkins_build_url.
     def format_metadata
-      [ {:key => :department, :value => @options[:department]},
-        {:key => :project, :value => @options[:project]},
-        {:key => :jenkins_build_url, :value => @options[:jenkins_build_url]},
-        {:key => :sshKeys, :value => "google_compute:#{File.read(find_google_ssh_public_key).strip}" }
-      ].delete_if { |member| member[:value].nil? or member[:value].empty?}
+      [{ key: :department, value: @options[:department] },
+       { key: :project, value: @options[:project] },
+       { key: :jenkins_build_url, value: @options[:jenkins_build_url] },
+       { key: :sshKeys, value: "google_compute:#{File.read(find_google_ssh_public_key).strip}" }].delete_if { |member| member[:value].nil? || member[:value].empty? }
     end
 
     # Create a new instance of the Google Compute Engine hypervisor object
@@ -85,7 +82,6 @@ module Beaker
 
       @logger.debug("Created Google Compute firewall #{@firewall}")
 
-
       @hosts.each do |host|
         if host[:image]
           gplatform = host[:image]
@@ -105,7 +101,7 @@ module Beaker
 
         # create new host name
         host['vmhostname'] = unique_host_id
-        #add a new instance of the image
+        # add a new instance of the image
         instance = @gce_helper.create_instance(host['vmhostname'], img, machineType, disk, start, attempts)
         @logger.debug("Created Google Compute instance for #{host.name}: #{host['vmhostname']}")
 
@@ -138,7 +134,7 @@ module Beaker
 
     # Shutdown and destroy virtual machines in the Google Compute Engine,
     # including their associated disks and firewall rules
-    def cleanup()
+    def cleanup
       attempts = @options[:timeout].to_i / SLEEPWAIT
       start = Time.now
 
@@ -150,7 +146,6 @@ module Beaker
         @gce_helper.delete_disk(host['diskname'], start, attempts)
         @logger.debug("Deleted Google Compute disk #{host['diskname']} for #{host.name}")
       end
-
     end
 
     # Shutdown and destroy Google Compute instances (including their associated
@@ -164,15 +159,15 @@ module Beaker
       if instances
         instances.each do |instance|
           created = Time.parse(instance['creationTimestamp'])
-          alive = (now - created )/60/60
-          if alive >= max_age
-            #kill it with fire!
-            @logger.debug("Deleting zombie instance #{instance['name']}")
-            @gce_helper.delete_instance( instance['name'], start, attempts )
-          end
+          alive = (now - created) / 60 / 60
+          next unless alive >= max_age
+
+          # kill it with fire!
+          @logger.debug("Deleting zombie instance #{instance['name']}")
+          @gce_helper.delete_instance(instance['name'], start, attempts)
         end
       else
-        @logger.debug("No zombie instances found")
+        @logger.debug('No zombie instances found')
       end
 
       # get rid of old disks
@@ -180,28 +175,27 @@ module Beaker
       if disks
         disks.each do |disk|
           created = Time.parse(disk['creationTimestamp'])
-          alive = (now - created )/60/60
-          if alive >= max_age
+          alive = (now - created) / 60 / 60
+          next unless alive >= max_age
 
-            # kill it with fire!
-            @logger.debug("Deleting zombie disk #{disk['name']}")
-            @gce_helper.delete_disk( disk['name'], start, attempts )
-          end
+          # kill it with fire!
+          @logger.debug("Deleting zombie disk #{disk['name']}")
+          @gce_helper.delete_disk(disk['name'], start, attempts)
         end
       else
-        @logger.debug("No zombie disks found")
+        @logger.debug('No zombie disks found')
       end
 
       # get rid of non-default firewalls
-      firewalls = @gce_helper.list_firewalls( start, attempts)
+      firewalls = @gce_helper.list_firewalls(start, attempts)
 
       if firewalls && !firewalls.empty?
         firewalls.each do |firewall|
           @logger.debug("Deleting non-default firewall #{firewall['name']}")
-          @gce_helper.delete_firewall( firewall['name'], start, attempts )
+          @gce_helper.delete_firewall(firewall['name'], start, attempts)
         end
       else
-        @logger.debug("No zombie firewalls found")
+        @logger.debug('No zombie firewalls found')
       end
     end
   end
