@@ -504,4 +504,48 @@ describe Beaker::GoogleComputeHelper, focus: true do
       end
     end
   end
+
+  # {
+  #   :api_method => #<Google::APIClient::Method:0x3fe5f04d07cc ID:compute.instances.get>,
+  #   :parameters => {"instance"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  # }
+  describe '#instance_get_req' do
+    let(:name) { 'beaker-tmp-instance' }
+
+    it 'retuns a instance get request hash object' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/instance_get_req', match_requests_on: %i[method uri body]) do
+        expect(g.instance_get_req(name)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+
+  describe '#create_instance' do
+    let(:name) { 'beaker-tmp-instance' }
+    let(:image) do
+      { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521' }
+    end
+    let(:img) do
+      { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521' }
+    end
+    let(:machineType) do
+      { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-standard-1' }
+    end
+    let(:disk) do
+      { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-disk' }
+    end
+
+    let(:start) { Time.now }
+    let(:attempts) { 3 }
+
+    it 'returns a hash with a GCE instance creation confirmation' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/create_instance', match_requests_on: %i[method uri]) do
+        expect(g.create_instance(name, img, machineType, disk, start, attempts)).to be({})
+        expect(g.create_instance(name, img, machineType, disk, start, attempts)).to be_kind_of(Hash)
+      end
+    end
+  end
+
 end
