@@ -9,7 +9,7 @@ require 'helpers'
 require 'mocks'
 
 # load beaker-google lib files
-Dir.glob(Dir.pwd + '/lib/beaker/hypervisor/*.rb') { |file| require file }
+Dir.glob(Dir.pwd + '/lib/beaker/hypervisor/*.rb').sort.each { |file| require file }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
