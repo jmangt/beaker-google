@@ -521,6 +521,28 @@ describe Beaker::GoogleComputeHelper, focus: true do
   end
 
 
+  # {
+  #   "cpuPlatform" => "Unknown CPU Platform",
+  #   "creationTimestamp" => "2020-06-03T14:03:00.189-07:00",
+  #   "deletionProtection" => false,
+  #   "disks" => [{"autoDelete"=>false, "boot"=>true, "deviceName"=>"persistent-disk-0", "diskSizeGb"=>"25", "guestOsFeatures"=>[{"type"=>"VIRTIO_SCSI_MULTIQUEUE"}, {"type"=>"UEFI_COMPATIBLE"}], "index"=>0, "interface"=>"SCSI", "kind"=>"compute#attachedDisk", "licenses"=>["https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-10-buster"], "mode"=>"READ_WRITE", "source"=>"https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-disk", "type"=>"PERSISTENT"}],
+  #   "fingerprint" => "qI0YiRPpgT8=",
+  #   "id" => "5700755964386717420",
+  #   "kind" => "compute#instance",
+  #   "labelFingerprint" => "42WmSpB8rSM=",
+  #   "machineType" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-standard-1",
+  #   "metadata" => {"fingerprint"=>"QifdRPFQkVk=", "kind"=>"compute#metadata"},
+  #   "name" => "beaker-tmp-instance",
+  #   "networkInterfaces" => [{"accessConfigs"=>[{"kind"=>"compute#accessConfig", "name"=>"External NAT", "networkTier"=>"PREMIUM", "type"=>"ONE_TO_ONE_NAT"}], "fingerprint"=>"_pa8FAljqwg=", "kind"=>"compute#networkInterface", "name"=>"nic0", "network"=>"https://www.googleapis.com/compute/v1/projects/beaker-compute/global/networks/default", "subnetwork"=>"https://www.googleapis.com/compute/v1/projects/beaker-compute/regions/us-central1/subnetworks/default"}],
+  #   "scheduling" => {"automaticRestart"=>true, "onHostMaintenance"=>"MIGRATE", "preemptible"=>false},
+  #   "selfLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance",
+  #   "shieldedInstanceConfig" => {"enableIntegrityMonitoring"=>true, "enableSecureBoot"=>false, "enableVtpm"=>true},
+  #   "shieldedInstanceIntegrityPolicy" => {"updateAutoLearnPolicy"=>true},
+  #   "startRestricted" => false,
+  #   "status" => "PROVISIONING",
+  #   "tags" => {"fingerprint"=>"42WmSpB8rSM="},
+  #   "zone" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a",
+  # }
   describe '#create_instance' do
     let(:name) { 'beaker-tmp-instance' }
     let(:image) do
@@ -542,7 +564,6 @@ describe Beaker::GoogleComputeHelper, focus: true do
     it 'returns a hash with a GCE instance creation confirmation' do
       g = gch
       VCR.use_cassette('google_compute_helper/create_instance', match_requests_on: %i[method uri]) do
-        expect(g.create_instance(name, img, machineType, disk, start, attempts)).to be({})
         expect(g.create_instance(name, img, machineType, disk, start, attempts)).to be_kind_of(Hash)
       end
     end
