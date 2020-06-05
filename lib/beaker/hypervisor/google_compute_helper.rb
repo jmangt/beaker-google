@@ -483,6 +483,7 @@ module Beaker
     # errors or running out of attempts
     def setMetadata_on_instance(name, fingerprint, data, start, attempts)
       zone_operation = execute(instance_setMetadata_req(name, fingerprint, data), start, attempts)
+
       status = ''
       try = (Time.now - start) / SLEEPWAIT
       while status !~ /DONE/ && (try <= attempts)

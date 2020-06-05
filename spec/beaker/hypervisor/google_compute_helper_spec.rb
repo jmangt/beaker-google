@@ -520,7 +520,6 @@ describe Beaker::GoogleComputeHelper, focus: true do
     end
   end
 
-
   # {
   #   "cpuPlatform" => "Unknown CPU Platform",
   #   "creationTimestamp" => "2020-06-03T14:03:00.189-07:00",
@@ -569,4 +568,106 @@ describe Beaker::GoogleComputeHelper, focus: true do
     end
   end
 
+  # {
+  #  :api_method => #<Google::APIClient::Method:0x3fdc4f045c5c ID:compute.instances.setMetadata>,
+  #  :body_object => {
+  #    "fingerprint"=>"qI0YiRPpgT8=",
+  #    "items"=>[
+  #      {:key=>:department, :value=>"beaker"},
+  #      {:key=>:project, :value=>"beaker-compute"},
+  #      {:key=>:jenkins_build_url, :value=>"https://jenkins.io"},
+  #      {:key=>:sshKeys, :value=>"google_compute:abcd123"}
+  #     ],
+  #    "kind"=>"compute#metadata"
+  #   },
+  #  :parameters => {
+  #    "instance"=>"beaker-tmp-instance",
+  #    "project"=>"beaker-compute",
+  #    "zone"=>"us-central1-a"
+  #   }
+  # }
+  describe '#instance_setMetadata_req' do
+    let(:name) { 'beaker-tmp-instance' }
+    let(:fingerprint) { 'qI0YiRPpgT8=' }
+    let(:data) do
+      [{ key: :department, value: 'beaker' },
+       { key: :project, value: 'beaker-compute' },
+       { key: :jenkins_build_url, value: 'https://jenkins.io' },
+       { key: :sshKeys, value: 'google_compute:abcd123' }]
+    end
+
+    it 'returns a hash with a GCE set metadata request' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/instance_setmetadata_req', match_requests_on: %i[method uri]) do
+        expect(g.instance_setMetadata_req(name, fingerprint, data)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  # {
+  #   :api_method => #<Google::APIClient::Method:0x3fbf5c4eb0b4 ID:compute.zoneOperations.get>,
+  #   :parameters => {"operation"=>"foo", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  # }
+  describe '#operation_get_req' do
+    let(:zone_operation) do
+      { 'id' => '1174395149241282414',
+        'name' => 'operation-1591366017070-5a756c627b604-fa94900f-83e77802',
+        'zone' =>
+         'https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a',
+        'operationType' => 'setMetadata',
+        'targetLink' =>
+         'https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance',
+        'targetId' => '5700755964386717420',
+        'status' => 'RUNNING',
+        'user' => 'beaker-compute@beaker-compute.iam.gserviceaccount.com',
+        'progress' => 0,
+        'insertTime' => '2020-06-05T07:06:57.596-07:00',
+        'startTime' => '2020-06-05T07:06:57.620-07:00',
+        'selfLink' =>
+         'https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/operations/operation-1591366017070-5a756c627b604-fa94900f-83e77802',
+        'kind' => 'compute#operation' }
+    end
+
+    it 'returns a hash with a GCE zone operation request' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/operation_get_req', match_requests_on: %i[method uri]) do
+        expect(g.operation_get_req(zone_operation['name'])).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  # {
+  #   "id" => "1174395149241282414",
+  #   "insertTime" => "2020-06-05T07:06:57.596-07:00",
+  #   "kind" => "compute#operation",
+  #   "name" => "operation-1591366017070-5a756c627b604-fa94900f-83e77802",
+  #   "operationType" => "setMetadata",
+  #   "progress" => 0,
+  #   "selfLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/operations/operation-1591366017070-5a756c627b604-fa94900f-83e77802",
+  #   "startTime" => "2020-06-05T07:06:57.620-07:00",
+  #   "status" => "RUNNING",
+  #   "targetId" => "5700755964386717420",
+  #   "targetLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance",
+  #   "user" => "beaker-compute@beaker-compute.iam.gserviceaccount.com",
+  #   "zone" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a",
+  # }
+  describe '#setMetadata_on_instance' do
+    let(:name) { 'beaker-tmp-instance' }
+    let(:fingerprint) { 'QifdRPFQkVk=' }
+    let(:data) do
+      [{ key: :department, value: 'beaker' },
+       { key: :project, value: 'beaker-compute' },
+       { key: :jenkins_build_url, value: 'https://jenkins.io' },
+       { key: :sshKeys, value: 'google_compute:abcd123' }]
+    end
+    let(:start) { Time.now }
+    let(:attempts) { 3 }
+
+    it 'returns a hash with a GCE zone operation response' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/setMetadata_on_instance', match_requests_on: %i[method uri]) do
+        expect(g.setMetadata_on_instance(name, fingerprint, data, start, attempts)).to be_kind_of(Hash)
+      end
+    end
+  end
 end
