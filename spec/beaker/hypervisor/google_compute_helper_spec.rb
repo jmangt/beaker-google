@@ -670,4 +670,55 @@ describe Beaker::GoogleComputeHelper, focus: true do
       end
     end
   end
+
+  # {
+  #   :api_method => #<Google::APIClient::Method:0x3ff0cd09407c ID:compute.instances.delete>,
+  #   :parameters => {"instance"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  # }
+  describe '#instance_delete_req' do
+    let(:name) { 'beaker-tmp-instance' }
+
+    it 'retuns a instance deletion request hash object' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/instance_delete_req', match_requests_on: %i[method uri body]) do
+        expect(g.instance_delete_req(name)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe '#delete_instance' do
+    let(:name) { 'beaker-tmp-instance' }
+    let(:start) { Time.now }
+    let(:attempts) { 3 }
+
+    # the method just loops until an expection is raised
+    # eaither because the instance does not exist anymore
+    # or because the we run out of retries
+    it 'waits until instance no longer exists then exists' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/delete_instance', match_requests_on: %i[method uri]) do
+        expect do
+          g.delete_instance(name, start, attempts)
+        end.to_not raise_error
+      end
+    end
+  end
+
+  # {
+  #   :api_method => #<Google::APIClient::Method:0x3ff6ed70e0a8 ID:compute.instances.delete>,
+  #   :parameters => {"instance"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  # }
+  describe '#disk_delete_req' do
+    let(:name) { 'beaker-tmp-instance' }
+
+    it 'retuns a disk deletion request hash object' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/disk_delete_req', match_requests_on: %i[method uri body]) do
+        expect(g.instance_delete_req(name)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+
+
 end
