@@ -689,7 +689,7 @@ describe Beaker::GoogleComputeHelper, focus: true do
   describe '#delete_instance' do
     let(:name) { 'beaker-tmp-instance' }
     let(:start) { Time.now }
-    let(:attempts) { 3 }
+    let(:attempts) { 1 }
 
     # the method just loops until an expection is raised
     # eaither because the instance does not exist anymore
@@ -705,8 +705,8 @@ describe Beaker::GoogleComputeHelper, focus: true do
   end
 
   # {
-  #   :api_method => #<Google::APIClient::Method:0x3ff6ed70e0a8 ID:compute.instances.delete>,
-  #   :parameters => {"instance"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  #   :api_method => #<Google::APIClient::Method:0x3fdb163b8888 ID:compute.disks.delete>,
+  #   :parameters => {"disk"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
   # }
   describe '#disk_delete_req' do
     let(:name) { 'beaker-tmp-instance' }
@@ -714,11 +714,28 @@ describe Beaker::GoogleComputeHelper, focus: true do
     it 'retuns a disk deletion request hash object' do
       g = gch
       VCR.use_cassette('google_compute_helper/disk_delete_req', match_requests_on: %i[method uri body]) do
-        expect(g.instance_delete_req(name)).to be_kind_of(Hash)
+        expect(g.disk_delete_req(name)).to be_kind_of(Hash)
       end
     end
   end
 
+  describe '#delete_disk' do
+    let(:name) { 'beaker-tmp-instance' }
+    let(:start) { Time.now }
+    let(:attempts) { 5 }
 
-
+    # The method just loops until an expection is raised eaither because the disk does not exist anymore
+    # or because the we run out of retries
+    #
+    # Disks can only be deleted if they are no longer attached to a vm
+    # You can only detach a disk from a vm that is not running
+    it 'waits until disk no longer present then exists' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/delete_disk', match_requests_on: %i[method uri]) do
+        expect do
+          g.delete_disk(name, start, attempts)
+        end.to_not raise_error
+      end
+    end
+  end
 end
