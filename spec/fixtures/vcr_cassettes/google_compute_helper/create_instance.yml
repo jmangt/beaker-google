@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances
     body:
       encoding: UTF-8
       string: '{"name":"beaker-tmp-instance","image":"https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521","zone":"https://www.googleapis.com/compute/v1/projects/beaker-compute/global/zones/us-central1-a","machineType":"https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-standard-1","disks":[{"source":"https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-disk","type":"PERSISTENT","boot":"true"}],"networkInterfaces":[{"accessConfigs":[{"type":"ONE_TO_ONE_NAT","name":"External
@@ -15,113 +15,7 @@ http_interactions:
       Accept-Encoding:
       - gzip
       Authorization:
-      - Bearer ya29.c.EloqB3d6dzhM-t6gGYNSP-PPGraK0aRPoTstYND8b7Y463KwEF94ORS3py12IJQuojLx7QTqZA0tgA5w5eiyczF1fuBiT-cgqMzsqWcL19IKaE_7zFbhZWGIQkM
-      Cache-Control:
-      - no-store
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Www-Authenticate:
-      - Bearer realm="https://accounts.google.com/", error="invalid_token"
-      Vary:
-      - Origin
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Encoding:
-      - gzip
-      Date:
-      - Wed, 03 Jun 2020 21:02:58 GMT
-      Server:
-      - ESF
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAC/4WQwU7DMAyG730Kq+etBcRpt2pUYpchQXdCHLLESsPSuCTpYEx9d5K0EhNC2in67S+WP58zgBytJZuv4BxCiJwEhnR/c7uYCh06x2Ss5c/4MaDz0DIByhyZVgLY4Fs0XnHmFRngFkWMTLsC6q8euUcBT1Wg4A4Y52EaeDqgWYAmqcIPooNCIAsUJlm4MraAF0Rove/dqiwFHlFTj9YVkkhqLDh1pUqsP5VOSbNUpvzEfUQ5GUcal72l97BYkc+K6QQuGL6mDPMt/upvZuX1r+M8IZGCOqZMBKWmPdOXPYvMUepFsTqd/KKtafKMQDwVWfU9Ff6BmlOf1mmRCbT5DIzpfZuNnGd+iEb5blvtmsd622zWVVM/RHzMxuwH1VrBt/sBAAA=
-  recorded_at: Wed, 03 Jun 2020 21:02:57 GMT
-- request:
-    method: post
-    uri: https://accounts.google.com/o/oauth2/token
-    body:
-      encoding: ASCII-8BIT
-      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJiZWFrZXItY29tcHV0ZUBiZWFrZXItY29tcHV0ZS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTU5MTIxODIzNywiaWF0IjoxNTkxMjE4MTE3LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZSJ9.P5Fs9753dywqQdD0QjP9mkn1DgdLLrNhDB7goZxfNQcK1JJwK7_I0ZMb1gZniPkU6Ax8MnwpGxIvygUBuLqIft-EXlvnzUREfpfQumqIBk5lODS-rL0U6cF4DESejp9gLlKNLWtaOmVWxlz5_SNUfMrXjawPrgJ0gnTJCuMbxSleCdvDlQOuQgfilSDpWdEhSk7LORT0UhMimB4GhwLBAcHOOkmt_ada0Pev3fZa_4uXFqyG01ikSk7GLqzOlomWBBlD1SbrYbZjJCKPzTPjkqYycWYz_feYLjXIpiUibtZ62XSj-Qi6wzSBjDS9l87gD4qI9kU4QEFlrnTRVnB9JA
-    headers:
-      User-Agent:
-      - Faraday v0.17.3
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin
-      - Referer
-      - X-Origin
-      Date:
-      - Wed, 03 Jun 2020 21:02:59 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"access_token":"ya29.c.Ko8BzQdVBJtol_DHOdBY-ARnf6DAK0KaXgFT4dAOvoejs2Zl2XTY_W0bCBSTklL6ofw2pl1k5uRjyHGY0tIrtNWOjGu5LAtKjtswkAtXnzQJIP5rlXgHgso3CHa4cm9BA8I1CZZUBunjWS8rAF8JeKWXlewpQq__ZWLirQk0pYFiTIk_mi1L7sNkHd6RxqiZb1A","expires_in":3599,"token_type":"Bearer"}'
-  recorded_at: Wed, 03 Jun 2020 21:02:58 GMT
-- request:
-    method: post
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances
-    body:
-      encoding: UTF-8
-      string: '{"name":"beaker-tmp-instance","image":"https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521","zone":"https://www.googleapis.com/compute/v1/projects/beaker-compute/global/zones/us-central1-a","machineType":"https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-standard-1","disks":[{"source":"https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-disk","type":"PERSISTENT","boot":"true"}],"networkInterfaces":[{"accessConfigs":[{"type":"ONE_TO_ONE_NAT","name":"External
-        NAT"}],"network":"https://www.googleapis.com/compute/v1/projects/beaker-compute/global/networks/default"}]}'
-    headers:
-      User-Agent:
-      - Beaker/4.23.2 google-api-ruby-client/0.8.7 Mac OS X/10.14.6 (gzip)
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip
-      Authorization:
-      - Bearer ya29.c.Ko8BzQdVBJtol_DHOdBY-ARnf6DAK0KaXgFT4dAOvoejs2Zl2XTY_W0bCBSTklL6ofw2pl1k5uRjyHGY0tIrtNWOjGu5LAtKjtswkAtXnzQJIP5rlXgHgso3CHa4cm9BA8I1CZZUBunjWS8rAF8JeKWXlewpQq__ZWLirQk0pYFiTIk_mi1L7sNkHd6RxqiZb1A
+      - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
       - no-store
       Accept:
@@ -140,7 +34,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Wed, 03 Jun 2020 21:03:00 GMT
+      - Mon, 24 Aug 2020 21:55:14 GMT
       Server:
       - ESF
       Cache-Control:
@@ -152,19 +46,19 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443";
+        ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VSQW7DIBC85xWRey0GjDG2T71VkaocqvQBmGxcmgQsgxO1Vf9ebBqrOfVQ5WAJZofZ2R1/LpbLRG+TeplQXpaCF4xSQklJuchYcj+WjTzCSLAd9NJraxDlFc1oSUXFM4K4FCznkldNUZWoYaTJy51EVaMgE2IbRT6smUReve9cjfH5fE5ba9sDyE67VNkjDl83eMAnirvevoHyDjcg99CjS2lUcXhwSIHxvTxQJKP87G3z3k19tHHQ+1j0sm/BP2mzv4kDHHp5aRTMZH/s0AX8bWE1LZoLQgTnVZGzshBU5BmJpPDAD26kPL+s16v1Y4SHMMkIXjt5uL6mWh7TNjBPWoFUyg7GjzNFiTBN24MbtckExPVsdEw2IyFGUiDCNjSvCasJSRmniIhwmr39xc+v+HDY3W7jc9wO/+uv3GszRfLT624WSxZfi2+JGEgvHAMAAA==
-  recorded_at: Wed, 03 Jun 2020 21:02:59 GMT
+        H4sIAAAAAAAC/7WSsU7DMBCG9z5FFVYc+5zYsTOxoUqoAyoPYNIjmLZOFDutAPHuJDGN6MSAOnjw3ef//rvz52K5TOw2KZeJFFopVRQgFecKMmCQ3I5pZw44Ak2LnQm2cQQGNGMSINOgiTBbI03OtdZsS4AhQK4MQZFz5MiiyEfjJpHXEFpfUno6ndK6aeo9mtb6tGoOdDhtH5AegbZd84ZV8PQZzQ47ck6NKp72nlToQmf2QEyUn71t3tupjnUeuxCTwXQ1hgfrdldxQIdawbgKZzgcWnIO/rawmgbNhWRSKyYgU5LnhdBFhIYHofcj8vi0Xq/W9zHcD52MwUsnd5fX1JpDWg/k0VZoqqrpXRh7ihJDN3WHftRmUyCOZ2PjZjnjjDBFeL6BvBSihDyVkBFWlIzN3v7i5QWP+5frTXxet6f/+pU766aV/NS6mcWSxdfiG0LmzQ0cAwAA
+  recorded_at: Mon, 24 Aug 2020 21:53:42 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
     body:
       encoding: UTF-8
       string: ''
@@ -176,7 +70,7 @@ http_interactions:
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.c.Ko8BzQdVBJtol_DHOdBY-ARnf6DAK0KaXgFT4dAOvoejs2Zl2XTY_W0bCBSTklL6ofw2pl1k5uRjyHGY0tIrtNWOjGu5LAtKjtswkAtXnzQJIP5rlXgHgso3CHa4cm9BA8I1CZZUBunjWS8rAF8JeKWXlewpQq__ZWLirQk0pYFiTIk_mi1L7sNkHd6RxqiZb1A
+      - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
       - no-store
       Accept:
@@ -187,7 +81,7 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - qwaErS4zqkSRWYUKqRS2i1-KGqw=/f3h6ewED3ls4LQs2tKE4Q9FIAjQ=
+      - vyySVg-8y4Gtz22c49uSjySOSHY=/x9cGK-IIp7cPe79ZU3aSRU3yx38=
       Content-Type:
       - application/json; charset=UTF-8
       Vary:
@@ -197,7 +91,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Wed, 03 Jun 2020 21:03:01 GMT
+      - Mon, 24 Aug 2020 21:55:15 GMT
       Server:
       - ESF
       Cache-Control:
@@ -209,19 +103,19 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443";
+        ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VVbW/bOAz+3l8R+L7OtdO3ZAX2IW2dnoEmcW2nw+FwCGSbcbXIkifJy7qh/32S3512xR1u+xBEFimSD/mQ/H40Ghk4MS5HxvnEtifn5+8vzk6nF5Px5OzENt5pccwBScxoiDMQEmW51j6xT2zTvjDt03B8dmmfXtr28Xj63rQn6lS9oygDrRoB2gE3ZZabmCoDNIZKQaJUKIXv6qy+tpimwHOOqdSvzk4+ZkF+NeXB4oOhNJ7LJxmKHzGF8CkvTT9KmYtLy9rv98cpYykBlGNxHLPMUr+8kGB9GVs5Z58glsKqI2lE3xgFYRXCjIFKjsjYRFbPgbDo2NTxJogn5riKWX3LQkdteP7qwQ3c1dJd3lYybe+3RFXnE+Se8Z1LJfAtikFH8XeZuyqDncr/DyIlLELEqu0JK4EtKogsAyk9iSL6Zc44pIpeA8xWZ/8V5w2zKI7t7hbFKifimtEtTrvc9PNTqsmaO6ulswlXG/23nIWtmYED56vKNUVk9FKjCi7EwCsyOAt3vRjq7DAtO6vG+Uc/QKNVfK5P/7RADjphk6PpfEY+fd6nHzq0h8YP2VE50MZLw0aCxe4VxjTZ8Bw/cIPQWXY4jYwlpcx3Zjebj74bOr36s4LHv6kHy1Ct3tjQF53rBL7gGJZ1iXLgAgupXpdqZo8QKkPwVenY7U3EmE6p5AV0tCkkuwECUpvbIiI6EVF+qIAhmf4r4AQijKgZE1YkTV81hhvh2DajQoHgxgsy4LagCmxwHbgdvrRQ83gl5mo8Fxz+BeUfXD90VxttZbNY34Xu/dpZOz0qvnv7/dqZu5vr1cKbhe7VnfMWh3UtAvwNbqNyW5z/nLhISjVzIbnRRT4gbQYSJUiin26Je7xNfG9+v3vYNb3xwkFrpN0iAsj2DtNfMLpeo2+z5AYUHm4+oQEXRGHpkDH6JxNygXTBaamqolu4t/6s7buSq5laxrGvNzEfctnIOUCWSxyRlsot5DgvPILklvGsrCTdUbano2tvPWrvS0WCIiDzN3Zxswa51EFwHEtI+p2j+lM1kxroHmdS5UydBmLxiIEkkLh1Rup52OZBgVcAAogVp6+qfu11ZS1+kHk2BF/d6/GXciyfFoxiyXiVYa3WFf/Af/vEY6otn7pAilyxBmYq5XeAOG3FA2sHfPzs2n9h38vTcFpn6pCNLRGOno9+AMCeH2h+CQAA
-  recorded_at: Wed, 03 Jun 2020 21:03:00 GMT
+        H4sIAAAAAAAC/7VV227bOBB9z1cY2tcqkr124hrog5PIWQHxJZKcoigWBiWNFdYUqZJU3Qvy70vqLicNdrHtg2GKM5yZM3Nm5sfZYGDg2JgNjNHkwr54O7Unwz+nF6Px5eTtpfFGiyMOSGJGA5yCkCjNCm17ZJv21ByNg+F4NpnMhuPzyWRk2pcz2y7fUZSCVg0BHYCbMs1MTJUBGkGpIFEilMIPdVZfe0wT4BnHVOpX49H71M+uptxfvjOUxlPxJEXRI6YQfMsK049SZmJmWcfj8TxhLCGAMizOI5Za6pflEqwvQyvj7BNEUlhVJLXoO6MgrFyYEVDJERmayOo4EBYdmjreGPHYHJYxq2+Z66iNjbd+cH13vXJXt6VM2/stUVX5BHlk/OBSCXyPItBRfCxyV2awVfn/QSSEhYhYlT1hxbBHOZFFIIUnkYe/zBmHRNGrh9lq7b/gvGYWxZHd3qJI5URcM7rHSZubbn4KNVlxZ71ydsF6p/9W86Ax03PgfFW5pogMnmuUwQUYeEkGZ+lul32dA6ZFZ1U4/+gGaDSKT9Xp7wbISSfsMjRdzMmnz8fkXYv21PgpO0oH2nhh2IixOLzAmDobG8fzXT9wVi1OI2VxIfOc+c3uvecGTqf+LOfRb+rBIlSrMzb0Res6hi84glVVogy4wEKq14Wa2SGEyhB8VTp2cxMyplMqeQ4tbXLJboCA1Ob2iIhWRJQfKqBPpv8KOIYQI2pGhOVx3Ve14Vo4tM0wVyC48YwMuCmoAutf+26LL8nVPF6LhRrPOYd/QfkH1wvc9U5b2S23d4F7v3W2ToeKb15/v3UW7u56vdzMA/fqznmNw7oWPv4Ot2G5W35OXCSlmrkQ3+gin5A2BYliJNFPt8Q93sfeZnF/eDjUvfHMQWOk2SICyP4O018wul6ib73kehTubz6hAedEYWmRMfoXE3KJdMFpoaqiW7q33rzpu4KrqVrGkac3Me9z2cg4QJpJHJKGyg3kKMs3BMk942lRSXqg7EgH15vtoLkvFAkKgSxe2cX1GuRSB8FxJCHudo7qT9VMaqBvOJMqZ+rUE4tHDCSG2K0yUs3DJg8KvALgQ6Q4fVX2a6crK/GDzNI++PJej7+EY/ltySiWjJcZ1mpNJk4Y9Nm1P2BvkyXBtMJ2yp+mdGdPZ/8AXb1+OTAJAAA=
+  recorded_at: Mon, 24 Aug 2020 21:53:43 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
     body:
       encoding: UTF-8
       string: ''
@@ -233,7 +127,7 @@ http_interactions:
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.c.Ko8BzQdVBJtol_DHOdBY-ARnf6DAK0KaXgFT4dAOvoejs2Zl2XTY_W0bCBSTklL6ofw2pl1k5uRjyHGY0tIrtNWOjGu5LAtKjtswkAtXnzQJIP5rlXgHgso3CHa4cm9BA8I1CZZUBunjWS8rAF8JeKWXlewpQq__ZWLirQk0pYFiTIk_mi1L7sNkHd6RxqiZb1A
+      - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
       - no-store
       Accept:
@@ -244,7 +138,7 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - Hth76WpD3LjtpNhHlwqEwLhRdrY=/BGD6LlOH9dva52_oSADgrYokI3I=
+      - niJTd1t_WtA2XJwG1r0cjMuhzug=/ETCpaAIoGUT0EKfhZl2_3eEqrOQ=
       Content-Type:
       - application/json; charset=UTF-8
       Vary:
@@ -254,7 +148,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Wed, 03 Jun 2020 21:03:01 GMT
+      - Mon, 24 Aug 2020 21:55:15 GMT
       Server:
       - ESF
       Cache-Control:
@@ -266,19 +160,19 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443";
+        ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VVbW/bOAz+3l8R+L7OtdO3ZAX2IW2dnoEmcW2nw+FwCGSbcbXIkifJy7qh/32S3512xR1u+xBEFimSD/mQ/H40Ghk4MS5HxvnEtifn5+8vzk6nF5Px5OzENt5pccwBScxoiDMQEmW51j6xT2zTvjDt03B8dmmfXtr28Xj63rQn6lS9oygDrRoB2gE3ZZabmCoDNIZKQaJUKIXv6qy+tpimwHOOqdSvzk4+ZkF+NeXB4oOhNJ7LJxmKHzGF8CkvTT9KmYtLy9rv98cpYykBlGNxHLPMUr+8kGB9GVs5Z58glsKqI2lE3xgFYRXCjIFKjsjYRFbPgbDo2NTxJogn5riKWX3LQkdteP7qwQ3c1dJd3lYybe+3RFXnE+Se8Z1LJfAtikFH8XeZuyqDncr/DyIlLELEqu0JK4EtKogsAyk9iSL6Zc44pIpeA8xWZ/8V5w2zKI7t7hbFKifimtEtTrvc9PNTqsmaO6ulswlXG/23nIWtmYED56vKNUVk9FKjCi7EwCsyOAt3vRjq7DAtO6vG+Uc/QKNVfK5P/7RADjphk6PpfEY+fd6nHzq0h8YP2VE50MZLw0aCxe4VxjTZ8Bw/cIPQWXY4jYwlpcx3Zjebj74bOr36s4LHv6kHy1Ct3tjQF53rBL7gGJZ1iXLgAgupXpdqZo8QKkPwVenY7U3EmE6p5AV0tCkkuwECUpvbIiI6EVF+qIAhmf4r4AQijKgZE1YkTV81hhvh2DajQoHgxgsy4LagCmxwHbgdvrRQ83gl5mo8Fxz+BeUfXD90VxttZbNY34Xu/dpZOz0qvnv7/dqZu5vr1cKbhe7VnfMWh3UtAvwNbqNyW5z/nLhISjVzIbnRRT4gbQYSJUiin26Je7xNfG9+v3vYNb3xwkFrpN0iAsj2DtNfMLpeo2+z5AYUHm4+oQEXRGHpkDH6JxNygXTBaamqolu4t/6s7buSq5laxrGvNzEfctnIOUCWSxyRlsot5DgvPILklvGsrCTdUbano2tvPWrvS0WCIiDzN3Zxswa51EFwHEtI+p2j+lM1kxroHmdS5UydBmLxiIEkkLh1Rup52OZBgVcAAogVp6+qfu11ZS1+kHk2BF/d6/GXciyfFoxiyXiVYa3WFf/Af/vEY6otn7pAilyxBmYq5XeAOG3FA2sHfPzs2n9h38vTcFpn6pCNLRGOno9+AMCeH2h+CQAA
-  recorded_at: Wed, 03 Jun 2020 21:03:00 GMT
+        H4sIAAAAAAAC/7VV227bOBB9z1cY2tfKkhzfgT44iZwVNr7ElhMsioVBS2OFa4oUSCpOW+TfS0qyLm4adLHtg2WJPJzL4ZmZrxetloFDY9wyOr2+3R8N7Z5zOex3uoPeaGB80NsBByQxoz6OQUgUJxna7timPTQ7Xd/pjnu9sdNt93od0x6MbTs/R1EMGroDdABuyjgxMVUGaAA5QKJIKMBX9a6+9phGwBOOqdSnup3HeJ1cDfl69tFQiNfsSIyCJ0zB/5xkpp+kTMTYso7HYztiLCKAEizaAYst9UtSCdazYyWc/QuBFFYRyWnrC6MgrFSYAVDJEXFMZNUcCIs6po43RDw0nTxm9S1THbWx9ie33vw2X9amfktABZUgj4wfPCqB71EAOoBPGW05eRXk/wcREbZDxCrsCSuEPUqJzALJPIl098uccYiUsho5W5X9N5yfmFhq347ddjrDtnoOaohCdhQHdrWKAsWauGZ0j6OKvTqDGUwWwlrM3a2/2Oq/+cQvzTQcuC/qNigirTcQMg/wstvu99udy0Hb6fXPMHkiPgaukcuVO/M2sybmgGlWmgVbf9STMErga/H2T5nsWSk92/HI/OvOHf19+Fgxcm78XGO5A208M2yEWBze0N2JsaW7Wntr351XXBgxC7O9lTu52T6uPN+tqYilPPhNRZyFatX6jl6oXIfwjAOYF9eYABdYSHU6g5k10SiG4EVh7HJlx5imVPIUKmmlkt0AAanN7RER1RZRfqiApuD+a8Ih7DCiZkBYGp6q82T4tOnY5i5VSXDjOzHg8kJ107pee1V+Uaoa+kJMVX9POfxEWTx4K99bbLWV7Wxz53v3G3fj1qT44f3zG3fqba8Xs+XE967u3Pc0rO9ijb/A7S4fTj8WLpJSNW0Ib/Qln4k2BolCJNEPx8w93oer5fT+8FDWxncOSiPlGBJA9neY/oIG+JZ8T1OyIeHm6BQ64ZSoXKrMGP2TCTlD+sJpBlXRzbzb1aSsu0yrsZrmwUqPct7UspFwgDiReEdKKZcpB0m6JEjuGY+zm6QHyo60db3ctMr1DEjQDsj0nWF+mqNc6iA4DiSE9cpR9amKSY2FJWdScabeGtviCQMJIfQKRop+WPKgklcJrCFQmr7K67VWlcX2g0ziZvL5um5/Ecfy84xRLBnPGdawkokzBZGR9/QYv0xFZBe5neunvLqL14tvU5R3N3EJAAA=
+  recorded_at: Mon, 24 Aug 2020 21:53:43 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
     body:
       encoding: UTF-8
       string: ''
@@ -290,7 +184,7 @@ http_interactions:
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.c.Ko8BzQdVBJtol_DHOdBY-ARnf6DAK0KaXgFT4dAOvoejs2Zl2XTY_W0bCBSTklL6ofw2pl1k5uRjyHGY0tIrtNWOjGu5LAtKjtswkAtXnzQJIP5rlXgHgso3CHa4cm9BA8I1CZZUBunjWS8rAF8JeKWXlewpQq__ZWLirQk0pYFiTIk_mi1L7sNkHd6RxqiZb1A
+      - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
       - no-store
       Accept:
@@ -301,7 +195,7 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - j2rbmaoB9UuCUpEONJ58zd5cyY8=/7q7P-OIanyVHU1p_4Txqyo2M2lY=
+      - NTrsS_FL46yltlxE_hWxC4pcSHs=/unN6v0doQFLqpKqo_-W6_cfILqk=
       Content-Type:
       - application/json; charset=UTF-8
       Vary:
@@ -311,7 +205,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Wed, 03 Jun 2020 21:03:02 GMT
+      - Mon, 24 Aug 2020 21:55:16 GMT
       Server:
       - ESF
       Cache-Control:
@@ -323,14 +217,14 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443";
+        ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VVbW/bOAz+3l8R+L7OtdO3ZAX2IW2dnoEmcW2nw+FwCGSbcbXIkifJy7qh/32S3512xR1u+xBEFimSD/mQ/H40Ghk4MS5HxvnEtifn5+8vzk6nF5Px5OzENt5pccwBScxoiDMQEmW51j6xT2zTvjDt03B8dmmfXtr28Xj63rQn6lS9oygDrRoB2gE3ZZabmCoDNIZKQaJUKIXv6qy+tpimwHOOqdSvzk4+ZkF+NeXB4oOhNJ7LJxmKHzGF8CkvTT9KmYtLy9rv98cpYykBlGNxHLPMUr+8kGB9GVs5Z58glsKqI2lE3xgFYRXCjIFKjsjYRFbPgbDo2NTxJogn5riKWX3LQkdteP7qwQ3c1dJd3lYybe+3RFXnE+Se8Z1LJfAtikFH8XeZuyqDncr/DyIlLELEqu0JK4EtKogsAyk9iSL6Zc44pIpeA8xWZ/8V5w2zKI7t7hbFKifimtEtTrvc9PNTqsmaO6ulswlXG/23nIWtmYED56vKNUVk9FKjCi7EwCsyOAt3vRjq7DAtO6vG+Uc/QKNVfK5P/7RADjphk6PpfEY+fd6nHzq0h8YP2VE50MZLw0aCxe4VxjTZ8Bw/cIPQWXY4jYwlpcx3Zjebj74bOr36s4LHv6kHy1Ct3tjQF53rBL7gGJZ1iXLgAgupXpdqZo8QKkPwVenY7U3EmE6p5AV0tCkkuwECUpvbIiI6EVF+qIAhmf4r4AQijKgZE1YkTV81hhvh2DajQoHgxgsy4LagCmxwHbgdvrRQ83gl5mo8Fxz+BeUfXD90VxttZbNY34Xu/dpZOz0qvnv7/dqZu5vr1cKbhe7VnfMWh3UtAvwNbqNyW5z/nLhISjVzIbnRRT4gbQYSJUiin26Je7xNfG9+v3vYNb3xwkFrpN0iAsj2DtNfMLpeo2+z5AYUHm4+oQEXRGHpkDH6JxNygXTBaamqolu4t/6s7buSq5laxrGvNzEfctnIOUCWSxyRlsot5DgvPILklvGsrCTdUbano2tvPWrvS0WCIiDzN3Zxswa51EFwHEtI+p2j+lM1kxroHmdS5UydBmLxiIEkkLh1Rup52OZBgVcAAogVp6+qfu11ZS1+kHk2BF/d6/GXciyfFoxiyXiVYa3WFf/Af/vEY6otn7pAilyxBmYq5XeAOG3FA2sHfPzs2n9h38vTcFpn6pCNLRGOno9+AMCeH2h+CQAA
-  recorded_at: Wed, 03 Jun 2020 21:03:01 GMT
+        H4sIAAAAAAAC/7VV227bOBB9z1cY2tfKkhzfgT44iZwVNr7ElhMsioVBS2OFa4oUSCpOW+TfS0qyLm4adLHtg2WJPJzL4ZmZrxetloFDY9wyOr2+3R8N7Z5zOex3uoPeaGB80NsBByQxoz6OQUgUJxna7timPTQ7Xd/pjnu9sdNt93od0x6MbTs/R1EMGroDdABuyjgxMVUGaAA5QKJIKMBX9a6+9phGwBOOqdSnup3HeJ1cDfl69tFQiNfsSIyCJ0zB/5xkpp+kTMTYso7HYztiLCKAEizaAYst9UtSCdazYyWc/QuBFFYRyWnrC6MgrFSYAVDJEXFMZNUcCIs6po43RDw0nTxm9S1THbWx9ie33vw2X9amfktABZUgj4wfPCqB71EAOoBPGW05eRXk/wcREbZDxCrsCSuEPUqJzALJPIl098uccYiUsho5W5X9N5yfmFhq347ddjrDtnoOaohCdhQHdrWKAsWauGZ0j6OKvTqDGUwWwlrM3a2/2Oq/+cQvzTQcuC/qNigirTcQMg/wstvu99udy0Hb6fXPMHkiPgaukcuVO/M2sybmgGlWmgVbf9STMErga/H2T5nsWSk92/HI/OvOHf19+Fgxcm78XGO5A208M2yEWBze0N2JsaW7Wntr351XXBgxC7O9lTu52T6uPN+tqYilPPhNRZyFatX6jl6oXIfwjAOYF9eYABdYSHU6g5k10SiG4EVh7HJlx5imVPIUKmmlkt0AAanN7RER1RZRfqiApuD+a8Ih7DCiZkBYGp6q82T4tOnY5i5VSXDjOzHg8kJ107pee1V+Uaoa+kJMVX9POfxEWTx4K99bbLWV7Wxz53v3G3fj1qT44f3zG3fqba8Xs+XE967u3Pc0rO9ijb/A7S4fTj8WLpJSNW0Ib/Qln4k2BolCJNEPx8w93oer5fT+8FDWxncOSiPlGBJA9neY/oIG+JZ8T1OyIeHm6BQ64ZSoXKrMGP2TCTlD+sJpBlXRzbzb1aSsu0yrsZrmwUqPct7UspFwgDiReEdKKZcpB0m6JEjuGY+zm6QHyo60db3ctMr1DEjQDsj0nWF+mqNc6iA4DiSE9cpR9amKSY2FJWdScabeGtviCQMJIfQKRop+WPKgklcJrCFQmr7K67VWlcX2g0ziZvL5um5/Ecfy84xRLBnPGdawkokzBZGR9/QYv0xFZBe5neunvLqL14tvU5R3N3EJAAA=
+  recorded_at: Mon, 24 Aug 2020 21:53:44 GMT
 recorded_with: VCR 6.0.0

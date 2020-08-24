@@ -1,18 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-highmem-2
+    method: post
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/global/firewalls?zone=us-central1-a
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"name":"beaker-create-firewall","allowed":[{"IPProtocol":"tcp","ports":["443","8140","61613","8080","8081"]}],"network":"https://www.googleapis.com/compute/v1/projects/beaker-compute/global/networks/default","sourceRanges":["0.0.0.0/0"]}'
     headers:
       User-Agent:
       - Beaker/4.23.2 google-api-ruby-client/0.8.7 Mac OS X/10.14.6 (gzip)
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip
-      Content-Type:
-      - ''
       Authorization:
       - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
@@ -24,8 +24,6 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Etag:
-      - j_gBOcFHODG-qzGyv6hZ9Kh1dIM=/GlFgW0nQQQtaoYebzR0SF8HHAGs=
       Content-Type:
       - application/json; charset=UTF-8
       Vary:
@@ -35,7 +33,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Mon, 24 Aug 2020 21:42:37 GMT
+      - Mon, 24 Aug 2020 21:42:41 GMT
       Server:
       - ESF
       Cache-Control:
@@ -55,6 +53,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/32R0W7CIBSG732KprsVgTYz6t3mEm9mYqZ7AKzH9qyFEg7V6bJ3H7Qu2bJkCSTw/z/fgcPHKElSPKSLJL0XIkvHcV84UB5bs0MN5JW20Zbz6ZzJjOVyJ6cLIcKYCCGYmIXVcM4oDTFqJKuwrDRodiMegAqHNkJjIEtOy80rjROZJ6vH5OVhPcTKLtRb2o5CKOuVwGjdZb0PgsxzOYioVQlbqwpY9YYYouoddac34AjJg/FPSHUkyWz2T2CL1wGTZtNcTmfDTa6t6Z/SEStC0qlGMjVYBM3xGU0d7cp7SwvOz+fzpGzbsgFlkSZFq3mYtvPAT5Jb175B4YnvQdXg2LcVixD/VYJrVVRoYHexwfrbSKRtpRwcQpNC/aNqCHq9RtN/4g199wOTjj5HX/r9BIjnAQAA
-  recorded_at: Mon, 24 Aug 2020 21:41:05 GMT
+        H4sIAAAAAAAC/61Sy07DMBC89yuqcMXxI3bs5sQNVUI9oPIBTrINpmkc2U4jhPh38qCBnjgUyT54Zjy7O/bHar2OTBll6ygVnFMuiEg2PJWESRLdj2yjTzDytgWng7ENomKjkkGX0oRSJHSpUyl5maeJROTAgNKcolJwlQxrNlku79/byc00HlyYyaBdBeHJNMeReQ2h9RnGfd/HlbVVDbo1Pi7sCQ+77QLgM8Wts29QBI9z0Edw6EJVtc11jQ/GQa/r+od3oAOgC/678HYaX2wkI5IolUouOCUsUbPIBx06P0qeX3a77e5xhruh/xG8rv9wfYyNPsXVoDybAnRR2K4J4ySzxTBD5cCP3mQC5lD2Zg6cEUYQUYjxPeUZZxmnsUyHiGVGyNLbH3qlrvRQH/415+VdPb7pfxxNM73Ct/3dYhatPldf69sZeaUCAAA=
+  recorded_at: Mon, 24 Aug 2020 21:41:09 GMT
 recorded_with: VCR 6.0.0

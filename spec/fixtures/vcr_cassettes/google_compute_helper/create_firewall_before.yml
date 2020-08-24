@@ -1,8 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/machineTypes/n1-highmem-2
+    method: delete
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/global/firewalls/beaker-create-firewall?zone=us-central1-a
     body:
       encoding: UTF-8
       string: ''
@@ -21,11 +21,9 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
-      Etag:
-      - j_gBOcFHODG-qzGyv6hZ9Kh1dIM=/GlFgW0nQQQtaoYebzR0SF8HHAGs=
       Content-Type:
       - application/json; charset=UTF-8
       Vary:
@@ -35,7 +33,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Mon, 24 Aug 2020 21:42:37 GMT
+      - Mon, 24 Aug 2020 21:42:40 GMT
       Server:
       - ESF
       Cache-Control:
@@ -55,6 +53,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/32R0W7CIBSG732KprsVgTYz6t3mEm9mYqZ7AKzH9qyFEg7V6bJ3H7Qu2bJkCSTw/z/fgcPHKElSPKSLJL0XIkvHcV84UB5bs0MN5JW20Zbz6ZzJjOVyJ6cLIcKYCCGYmIXVcM4oDTFqJKuwrDRodiMegAqHNkJjIEtOy80rjROZJ6vH5OVhPcTKLtRb2o5CKOuVwGjdZb0PgsxzOYioVQlbqwpY9YYYouoddac34AjJg/FPSHUkyWz2T2CL1wGTZtNcTmfDTa6t6Z/SEStC0qlGMjVYBM3xGU0d7cp7SwvOz+fzpGzbsgFlkSZFq3mYtvPAT5Jb175B4YnvQdXg2LcVixD/VYJrVVRoYHexwfrbSKRtpRwcQpNC/aNqCHq9RtN/4g199wOTjj5HX/r9BIjnAQAA
-  recorded_at: Mon, 24 Aug 2020 21:41:05 GMT
+        H4sIAAAAAAAC/8VOOw6DMAzdOYWVhaUIBqYeoCfoVnUwwVDagJEdxIC4e0Ogam/QyX7v6X2WBMCQCIs5wxJAgJZrCqgsytNO9KSK7caZ64NASHkSS5COwk+yXvOK8EWSWe7HyVPeOq7Q5U0nNKNzX10IPWUfPoUZFQb20PA01Oaoi3M0tN0ihmPXH6bEypp77Iatcc/61UKIctSC9RKdh7jGe0+2b03ehY889WcBAAA=
+  recorded_at: Mon, 24 Aug 2020 21:41:08 GMT
 recorded_with: VCR 6.0.0

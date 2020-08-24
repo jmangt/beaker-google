@@ -1,18 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: delete
-    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
+    method: post
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks?sourceImage=https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"name":"beaker-delete-disk","sizeGb":25}'
     headers:
       User-Agent:
       - Beaker/4.23.2 google-api-ruby-client/0.8.7 Mac OS X/10.14.6 (gzip)
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip
-      Content-Type:
-      - ''
       Authorization:
       - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
@@ -33,7 +33,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Mon, 24 Aug 2020 21:55:20 GMT
+      - Mon, 24 Aug 2020 21:55:11 GMT
       Server:
       - ESF
       Cache-Control:
@@ -53,11 +53,11 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VSy07DMBC89yuqcMXxI7ET58QBhCqhikN/wEm3wTSxI9tpBYh/J48S0TPqwQfPjmdmd/21Wq8jvY+KdUQpZ1kuJKWUUCaJpDK6H8tGtTASbAdOBW0NolzmCRGUylwSxNVeCZXmaclLgVSiJFeEDnBZiUMCs8inNZPIWwidLzA+n89xbW3dgOq0jyvb4uF0fQB8orhz9h2q4HEJ6ggO/ZZGFY97jyowwamGIjXLL9l2H93ks4cGwsU7KFdDeNHmeJMEWBsflKlgIYe2Q7/g3wibadCMCyJkTjhNcsHSjMtsJg0PQu9HyuvT9nGzfZ7h3oMbweskD9fXWKs2rgfmSVegqsr2Jow9zRJDN7UDP2qTCRjSgQs7PW+WEUYQyRFLdzQtOC8YiRM6QFlByCUbNIfbTXBZn8f/+mVHbaYRX7zuFrFo9b36AVHqVRvsAgAA
-  recorded_at: Mon, 24 Aug 2020 21:53:48 GMT
+        H4sIAAAAAAAC/7VSQU7DMBC89xVVuOLYjrtxkhM3VAn1gMoDnHQbTNI4ip1WgPg7cQwRPXFAHGzJs6PZ2Vm/r9brSB+iYh0BY1IKKTkInuXABCTRrS936oSeYHoclNOmIxzyTLCUcwZ5SkAdVKrEMcUUE1KWbCOAIRG8yqFECCJvpptFnp3rbUHp5XKJa2PqFlWvbVyZE51OPzqkZ077wbxg5SwtUTU4kO+SV7F0tKTCzg2q5UQF+cXb/rWf++jO4uBC0amhRvegu+ZfHNCDts1CPGCLDonHfnbfzhlPyUIiMyZBTFcOGchAsk650XrK49Nut93dB3ichvDgtYm762es1SmuJ+ZZV6iqyoyd8+MEiWmQekDrtdkMhGT2Oiw1YQkjLCPJZs83BUDBecx4TpgsGFu8/cJP0is+tsf/C3vZtKV/+pCN7uaVfPW6WcSi1cfqE1ZzJHQXAwAA
+  recorded_at: Mon, 24 Aug 2020 21:53:39 GMT
 - request:
     method: get
-    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/instances/beaker-tmp-instance
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-delete-disk
     body:
       encoding: UTF-8
       string: ''
@@ -80,7 +80,7 @@ http_interactions:
       message: OK
     headers:
       Etag:
-      - CSuqdSXI5RzR3VsvDANAmYFOFqw=/ymeBii2LoD7lTfmF5yeo6ItBLjI=
+      - 9piprEh6iFdXSGpQXNjfIPHmQ-I=/uIAhnyUyNXYX-E5KXsxAQ4m8qD8=
       Content-Type:
       - application/json; charset=UTF-8
       Vary:
@@ -90,7 +90,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Mon, 24 Aug 2020 21:55:21 GMT
+      - Mon, 24 Aug 2020 21:55:11 GMT
       Server:
       - ESF
       Cache-Control:
@@ -110,6 +110,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VV227bOBB9z1cY2tfKkhzfgT44iZwVNr7ElhMsioVBS2OFa4oUSCpOW+TfS0qyLm4adLHtg2WJPJzL4ZmZrxetloFDY9wyOr2+3R8N7Z5zOex3uoPeaGB80NsBByQxoz6OQUgUJxna7timPTQ7Xd/pjnu9sdNt93od0x6MbTs/R1EMGroDdABuyjgxMVUGaAA5QKJIKMBX9a6+9phGwBOOqdSnup3HeJ1cDfl69tFQiNfsSIyCJ0zB/5xkpp+kTMTYso7HYztiLCKAEizaAYst9UtSCdazYyWc/QuBFFYRyWnrC6MgrFSYAVDJEXFMZNUcCIs6po43RDw0nTxm9S1THbWx9ie33vw2X9amfktABZUgj4wfPCqB71EAOoBPGW05eRXk/wcREbZDxCrsCSuEPUqJzALJPIl098uccYiUsho5W5X9N5yfmFhq347ddjrDtnoOaohCdhQHdrWKAsWauGZ0j6OKvTqDGUwWwlrM3a2/2Oq/+cQvzTQcuC/qNigirTcQMg/wstvu99udy0Hb6fXPMHkiPgaukcuVO/M2sybmgGlWmgVbf9STMErga/H2T5nsWSk92/HI/OvOHf19+Fgxcm78XGO5A208M2yEWBze0N2JsaW7Wntr351XXBgxC7O9lTu52T6uPN+tqYilPPhNRZyFatX6jl6oXIfwjAOYF9eYABdYSHU6g5k10SiG4EVh7HJlx5imVPIUKmmlkt0AAanN7RER1RZRfqiApuD+a8Ih7DCiZkBYGp6q82T4tOnY5i5VSXDjOzHg8kJ107pee1V+Uaoa+kJMVX9POfxEWTx4K99bbLWV7Wxz53v3G3fj1qT44f3zG3fqba8Xs+XE967u3Pc0rO9ijb/A7S4fTj8WLpJSNW0Ib/Qln4k2BolCJNEPx8w93oer5fT+8FDWxncOSiPlGBJA9neY/oIG+JZ8T1OyIeHm6BQ64ZSoXKrMGP2TCTlD+sJpBlXRzbzb1aSsu0yrsZrmwUqPct7UspFwgDiReEdKKZcpB0m6JEjuGY+zm6QHyo60db3ctMr1DEjQDsj0nWF+mqNc6iA4DiSE9cpR9amKSY2FJWdScabeGtviCQMJIfQKRop+WPKgklcJrCFQmr7K67VWlcX2g0ziZvL5um5/Ecfy84xRLBnPGdawkokzBZGR9/QYv0xFZBe5neunvLqL14tvU5R3N3EJAAA=
-  recorded_at: Mon, 24 Aug 2020 21:53:48 GMT
+        H4sIAAAAAAAC/7VTTY/aMBS88ytQel1jx/kkUg8LhSoSiHYTWlVVhZzEzbo4cRQ7i9jV/vfaCSAqeqq6B1uy37wZeeb5ZTQeW6yworHl2KGHgxAFnqO3qRd6gXVnynlLiWKiTllFpSJVY9AYYQRQCLCb2m7keZFtTxC2AQoihIa+mlTUQDNK9rQFBeVUUVAwuR/qkj3Tj1lP5g03z6LuOx6VamQE4eFwmJRClJyShslJLiqoV9MpCp9s2LTiF82VhCeBc8mwSNhJkNNatYTbgJwEFVGdNAIPi/sP306XlP9csXr/JrrQvPYCvHVAdG1O44qU//LsgmaM1CDnoitgyUVGOGSG61KyEcg6qbT0k8kLedi+EY6H8H3HDxzkhxj5QYhdBzsDUh2bt4mktybV7BI2BdDR1AVpi0GUM42T1ET1XZ/H/8WaM+mNOZaW+NHrlp0e8I1c6nnv2iv5l36/cuNL/JDGm10yT+LdertK48/bxXZh9bDXu7/3bBfLeDffrD/dp/FsdQZftDnJKF+yuqRt07JamRYXf62SZha2yfr9H87MRXHtjue5jm+j0EQXIB9P9de9EDePR8lywmdc5PtE/7nZUfXNloum/kC7Z3U/Bicv3/UjOnod/QbqaUINHwQAAA==
+  recorded_at: Mon, 24 Aug 2020 21:53:39 GMT
 recorded_with: VCR 6.0.0

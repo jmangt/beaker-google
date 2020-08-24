@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'shared_examples'
 
 describe Beaker::GoogleComputeHelper, focus: true do
   let(:target) { Beaker::GoogleComputeHelper }
@@ -124,9 +125,26 @@ describe Beaker::GoogleComputeHelper, focus: true do
 
   # {:api_method=>#<Google::APIClient::Method:0x3fddb58b9854 ID:compute.images.list>, :parameters=>{"project"=>"beaker-compute"}}
   describe '#image_list_req' do
+    let(:request) do
+      gch.image_list_req(options[:gce_project])
+    end
+
+    let(:parameters) do
+      { 'project' => 'beaker-compute' }
+    end
+
     it 'Creates a request for listing all images in a project' do
-      request = gch.image_list_req(options[:gce_project])
       expect(request).to be_kind_of(Hash)
+    end
+
+    it 'returns a valid request object' do
+      expect(request.keys).to eql(%i[api_method parameters])
+      expect(request[:api_method]).to be_instance_of(Google::APIClient::Method)
+      expect(request[:parameters]).to be_instance_of(Hash)
+    end
+
+    it 'passes the correct parameters to the request' do
+      expect(request[:parameters]).to eql(parameters)
     end
   end
 
@@ -136,36 +154,79 @@ describe Beaker::GoogleComputeHelper, focus: true do
     let(:start) { Time.now }
     let(:attempts) { 3 }
 
+    let(:request) do
+      gch.get_latest_image(platform, start, attempts)
+    end
+
+    let(:response) do
+      %w[kind id creationTimestamp name description sourceType rawDisk status archiveSizeBytes diskSizeGb licenses family selfLink labelFingerprint licenseCodes]
+    end
+
     it 'raises error if no matches are found' do
       stub_image_list_req('all-deprecated')
-      expect { gch.get_latest_image(platform, start, attempts) }.to raise_error(RuntimeError, 'Unable to find a single matching image for centos-7-x86_64, found []')
+      expect { request }.to raise_error(RuntimeError, 'Unable to find a single matching image for centos-7-x86_64, found []')
     end
 
     it 'it returns a single image' do
       stub_image_list_req('centos-7')
-      expect(gch.get_latest_image(platform, start, attempts)).to be_instance_of(Hash)
+      expect(request).to be_instance_of(Hash)
+      expect(request.keys).to eql(response)
     end
   end
 
   # <Hash:70360533969540> => {:api_method=>#<Google::APIClient::Method:0x3ffe154a623c ID:compute.machineTypes.get>, :parameters=>{"machineType"=>"n1-highmem-2", "project"=>"beaker-compute", "zone"=>"us-central1-a"}}
   describe '#machineType_get_req' do
+    let(:request) do
+      gch.machineType_get_req
+    end
+
+    let(:parameters) do
+      %w[project zone machineType]
+    end
+
     it 'returns a hash with a GCE get machine type request' do
-      g = gch
       VCR.use_cassette('google_compute_helper/machineType_get_req', match_requests_on: %i[method uri body]) do
-        expect(g.machineType_get_req).to be_kind_of(Hash)
+        expect(request).to be_kind_of(Hash)
+      end
+    end
+
+    it 'returns a valid request object' do
+      VCR.use_cassette('google_compute_helper/machineType_get_req', match_requests_on: %i[method uri body]) do
+        expect(request.keys).to eql(%i[api_method parameters])
+        expect(request[:api_method]).to be_instance_of(Google::APIClient::Method)
+        expect(request[:parameters]).to be_instance_of(Hash)
+      end
+    end
+
+    it 'passes the correct parameters' do
+      VCR.use_cassette('google_compute_helper/machineType_get_req', match_requests_on: %i[method uri body]) do
+        expect(request[:parameters].keys).to eql(parameters)
       end
     end
   end
 
   # <Hash:70360533969540> => {:api_method=>#<Google::APIClient::Method:0x3ffe154a623c ID:compute.machineTypes.get>, :parameters=>{"machineType"=>"n1-highmem-2", "project"=>"beaker-compute", "zone"=>"us-central1-a"}}
-  describe '#get_machineType' do
+  describe '#get_machineType', focus: true do
     let(:start) { Time.now }
     let(:attempts) { 3 }
 
+    let(:request) do
+      gch.get_machineType(start, attempts)
+    end
+
+    let(:response) do
+      %w[id creationTimestamp name description guestCpus memoryMb imageSpaceGb maximumPersistentDisks maximumPersistentDisksSizeGb zone selfLink isSharedCpu kind]
+    end
+
     it 'returns a hash with a GCE get machine type request' do
-      g = gch
       VCR.use_cassette('google_compute_helper/machineType_get_req', match_requests_on: %i[method uri body]) do
-        expect(g.get_machineType(start, attempts)).to be_kind_of(Hash)
+        expect(request).to be_kind_of(Hash)
+      end
+    end
+
+    it 'returns the correct fields' do
+      VCR.use_cassette('google_compute_helper/machineType_get_req', match_requests_on: %i[method uri body]) do
+        expect(request.keys).to eql(response)
       end
     end
   end
@@ -318,6 +379,61 @@ describe Beaker::GoogleComputeHelper, focus: true do
     end
   end
 
+  # {
+  #   "id" => "3461028139834688623",
+  #   "insertTime" => "2020-06-03T12:31:12.257-07:00",
+  #   "kind" => "compute#operation",
+  #   "name" => "operation-1591212671680-5a733120ebf2f-c83ae8cc-bbbad0c9",
+  #   "operationType" => "insert",
+  #   "progress" => 0,
+  #   "selfLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/global/operations/operation-1591212671680-5a733120ebf2f-c83ae8cc-bbbad0c9",
+  #   "startTime" => "2020-06-03T12:31:12.314-07:00",
+  #   "status" => "RUNNING",
+  #   "targetId" => "4313847222769435759",
+  #   "targetLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/global/firewalls/beaker-tmp-firewall-rule",
+  #   "user" => "beaker-compute@beaker-compute.iam.gserviceaccount.com",
+  # }
+  describe '#create_firewall' do
+    let(:name) { 'beaker-create-firewall' }
+    let(:network) do
+      { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/beaker-compute/global/networks/default' }
+    end
+    let(:start) { Time.now }
+    let(:attempts) { 3 }
+
+    before(:each) do
+      VCR.use_cassette('google_compute_helper/create_firewall_before', match_requests_on: %i[method uri]) do
+        gch.delete_firewall(name, start, attempts)
+      end
+    rescue StandardError
+      puts "[WARN] #{name} firewall object not found"
+    end
+
+    after(:each) do
+      VCR.use_cassette('google_compute_helper/create_firewall_after', match_requests_on: %i[method uri]) do
+        gch.delete_firewall(name, start, attempts)
+      end
+    rescue StandardError
+      puts "[WARN] #{name} firewall object not found"
+    end
+
+    it 'returns a hash with a GCE disk insertion confirmation' do
+      VCR.use_cassette('google_compute_helper/create_firewall', match_requests_on: %i[method uri]) do
+        expect(gch.create_firewall(name, network, start, attempts)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  # {:api_method=>#<Google::APIClient::Method:0x3fe0923c0f48 ID:compute.firewalls.list>, :parameters=>{"project"=>"beaker-compute", "zone"=>"us-central1-a"}}
+  describe '#firewall_list_req' do
+    it 'Creates a request for listing all firewall in a project' do
+      VCR.use_cassette('google_compute_helper/firewall_list_req', match_requests_on: %i[method uri]) do
+        request = gch.firewall_list_req
+        expect(request).to be_kind_of(Hash)
+      end
+    end
+  end
+
   # [{"allowed"=>
   #      [{"IPProtocol"=>"tcp", "ports"=>["443", "8140", "61613", "8080", "8081"]}],
   #     "creationTimestamp"=>"2019-08-02T08:56:40.846-07:00",
@@ -392,31 +508,36 @@ describe Beaker::GoogleComputeHelper, focus: true do
   end
 
   # {
-  #   "id" => "3461028139834688623",
-  #   "insertTime" => "2020-06-03T12:31:12.257-07:00",
-  #   "kind" => "compute#operation",
-  #   "name" => "operation-1591212671680-5a733120ebf2f-c83ae8cc-bbbad0c9",
-  #   "operationType" => "insert",
-  #   "progress" => 0,
-  #   "selfLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/global/operations/operation-1591212671680-5a733120ebf2f-c83ae8cc-bbbad0c9",
-  #   "startTime" => "2020-06-03T12:31:12.314-07:00",
-  #   "status" => "RUNNING",
-  #   "targetId" => "4313847222769435759",
-  #   "targetLink" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/global/firewalls/beaker-tmp-firewall-rule",
-  #   "user" => "beaker-compute@beaker-compute.iam.gserviceaccount.com",
+  #   :api_method => #<Google::APIClient::Method:0x3fccfb9d1504 ID:compute.firewalls.delete>,
+  #   :parameters => {"firewall"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
   # }
-  describe '#create_firewall' do
-    let(:name) { 'beaker-tmp-firewall-rule' }
+  describe '#firewall_delete_req' do
+    let(:name) { 'beaker-firewall-delete-req' }
+
+    it 'retuns a firewall deletion request hash object' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/firewall_delete_req', match_requests_on: %i[method uri body]) do
+        expect(g.firewall_delete_req(name)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe '#delete_firewall' do
+    let(:name) { 'beaker-delete-firewall' }
     let(:network) do
       { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/beaker-compute/global/networks/default' }
     end
     let(:start) { Time.now }
     let(:attempts) { 3 }
 
-    it 'returns a hash with a GCE disk insertion confirmation' do
+    it 'deletes an existing firewall rule' do
       g = gch
-      VCR.use_cassette('google_compute_helper/firewall_insert_req', match_requests_on: %i[method uri]) do
-        expect(g.create_firewall(name, network, start, attempts)).to be_kind_of(Hash)
+      VCR.use_cassette('google_compute_helper/delete_firewall', match_requests_on: %i[method uri]) do
+        gch.create_firewall(name, network, start, attempts)
+
+        expect do
+          expect(g.delete_firewall(name, start, attempts))
+        end.to_not raise_error
       end
     end
   end
@@ -457,17 +578,80 @@ describe Beaker::GoogleComputeHelper, focus: true do
   #   "zone" => "https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a",
   # }
   describe '#create_disk' do
-    let(:name) { 'beaker-tmp-disk' }
+    let(:name) { 'beaker-create-disk' }
     let(:img) do
       { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521' }
     end
     let(:start) { Time.now }
     let(:attempts) { 3 }
 
+    before(:each) do
+      VCR.use_cassette('google_compute_helper/create_disk_before', match_requests_on: %i[method uri]) do
+        gch.delete_disk(name, start, attempts)
+      end
+    rescue
+      puts "[WARN] #{name} object not found"
+    end
+
+    after(:each) do
+      VCR.use_cassette('google_compute_helper/create_disk_after', match_requests_on: %i[method uri]) do
+        gch.delete_disk(name, start, attempts)
+      end
+    rescue
+      puts "[WARN] #{name} object not found"
+    end
+
     it 'returns a hash with a GCE disk insertion confirmation' do
-      g = gch
       VCR.use_cassette('google_compute_helper/create_disk', match_requests_on: %i[method uri]) do
-        expect(g.create_disk(name, img, start, attempts)).to be_kind_of(Hash)
+        expect(gch.create_disk(name, img, start, attempts)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  # {
+  #   :api_method => #<Google::APIClient::Method:0x3fdb163b8888 ID:compute.disks.delete>,
+  #   :parameters => {"disk"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  # }
+  describe '#disk_delete_req' do
+    let(:name) { 'beaker-delete-disk-req' }
+
+    it 'retuns a disk deletion request hash object' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/disk_delete_req', match_requests_on: %i[method uri body]) do
+        expect(g.disk_delete_req(name)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  describe '#delete_disk' do
+    let(:name) { 'beaker-delete-disk' }
+    let(:start) { Time.now }
+    let(:attempts) { 5 }
+
+    let(:img) do
+      { 'selfLink' => 'https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/debian-10-buster-v20200521' }
+    end
+    let(:start) { Time.now }
+    let(:attempts) { 3 }
+
+    before(:each) do
+      VCR.use_cassette('google_compute_helper/delete_disk_before', match_requests_on: %i[method uri]) do
+        gch.create_disk(name, img, start, attempts)
+      end
+    rescue
+      puts "[WARN] #{name} object already exists"
+    end
+
+    # The method just loops until an expection is raised eaither because the disk does not exist anymore
+    # or because the we run out of retries
+    #
+    # Disks can only be deleted if they are no longer attached to a vm
+    # You can only detach a disk from a vm that is not running
+    it 'waits until disk no longer present then exists' do
+      VCR.use_cassette('google_compute_helper/delete_disk', match_requests_on: %i[method uri]) do
+        expect do
+          gch.delete_disk(name, start, attempts)
+        end.to_not raise_error
       end
     end
   end
@@ -704,66 +888,8 @@ describe Beaker::GoogleComputeHelper, focus: true do
     end
   end
 
-  # {
-  #   :api_method => #<Google::APIClient::Method:0x3fdb163b8888 ID:compute.disks.delete>,
-  #   :parameters => {"disk"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
-  # }
-  describe '#disk_delete_req' do
-    let(:name) { 'beaker-tmp-instance' }
-
-    it 'retuns a disk deletion request hash object' do
-      g = gch
-      VCR.use_cassette('google_compute_helper/disk_delete_req', match_requests_on: %i[method uri body]) do
-        expect(g.disk_delete_req(name)).to be_kind_of(Hash)
-      end
-    end
-  end
-
-  describe '#delete_disk' do
-    let(:name) { 'beaker-tmp-instance' }
-    let(:start) { Time.now }
-    let(:attempts) { 5 }
-
-    # The method just loops until an expection is raised eaither because the disk does not exist anymore
-    # or because the we run out of retries
-    #
-    # Disks can only be deleted if they are no longer attached to a vm
-    # You can only detach a disk from a vm that is not running
-    it 'waits until disk no longer present then exists' do
-      g = gch
-      VCR.use_cassette('google_compute_helper/delete_disk', match_requests_on: %i[method uri]) do
-        expect do
-          g.delete_disk(name, start, attempts)
-        end.to_not raise_error
-      end
-    end
-  end
-
-  # {
-  #   :api_method => #<Google::APIClient::Method:0x3fccfb9d1504 ID:compute.firewalls.delete>,
-  #   :parameters => {"firewall"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
-  # }
-  describe '#firewall_delete_req' do
-    let(:name) { 'beaker-tmp-instance' }
-
-    it 'retuns a firewall deletion request hash object' do
-      g = gch
-      VCR.use_cassette('google_compute_helper/firewall_delete_req', match_requests_on: %i[method uri body]) do
-        expect(g.firewall_delete_req(name)).to be_kind_of(Hash)
-      end
-    end
-  end
-
-  # {:api_method=>#<Google::APIClient::Method:0x3fe0923c0f48 ID:compute.firewalls.list>, :parameters=>{"project"=>"beaker-compute", "zone"=>"us-central1-a"}}
-  describe '#firewall_list_req' do
-    it 'Creates a request for listing all firewall in a project' do
-      request = gch.firewall_list_req
-      expect(request).to be_kind_of(Hash)
-    end
-  end
-
   # {:api_method=>#<Google::APIClient::Method:0x3fde9c1d4010 ID:compute.networks.get>, :parameters=>{"network"=>"default", "project"=>"beaker-compute", "zone"=>"us-central1-a"}}
-  describe "#network_get_req" do
+  describe '#network_get_req' do
     let(:name) { 'default' }
 
     it 'Creates a Google Compute get network request' do
@@ -773,7 +899,7 @@ describe Beaker::GoogleComputeHelper, focus: true do
   end
 
   # {:api_method=>#<Google::APIClient::Method:0x3fece20fb4f0 ID:compute.zoneOperations.get>, :parameters={ "name"=>"operation-1591366017070-...", "project"=>"beaker-compute", "zone"=>"us-central1-a"}}
-  describe "#operation_get_req" do
+  describe '#operation_get_req' do
     let(:zone_operation_name) { 'operation-1591366017070-...' }
 
     it 'Creates a Google Compute zone operation request' do

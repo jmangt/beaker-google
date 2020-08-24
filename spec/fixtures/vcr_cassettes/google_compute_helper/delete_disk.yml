@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-instance
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-delete-disk
     body:
       encoding: UTF-8
       string: ''
@@ -14,112 +14,7 @@ http_interactions:
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.c.EloqB3d6dzhM-t6gGYNSP-PPGraK0aRPoTstYND8b7Y463KwEF94ORS3py12IJQuojLx7QTqZA0tgA5w5eiyczF1fuBiT-cgqMzsqWcL19IKaE_7zFbhZWGIQkM
-      Cache-Control:
-      - no-store
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Www-Authenticate:
-      - Bearer realm="https://accounts.google.com/", error="invalid_token"
-      Vary:
-      - Origin
-      - Referer
-      - X-Origin
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Encoding:
-      - gzip
-      Date:
-      - Fri, 05 Jun 2020 15:42:23 GMT
-      Server:
-      - ESF
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAC/4WQwU7DMAyG730Kq+etBcRpt2pUYpchQXdCHLLESsPSuCTpYEx9d5K0EhNC2in67S+WP58zgBytJZuv4BxCiJwEhnR/c7uYCh06x2Ss5c/4MaDz0DIByhyZVgLY4Fs0XnHmFRngFkWMTLsC6q8euUcBT1Wg4A4Y52EaeDqgWYAmqcIPooNCIAsUJlm4MraAF0Rove/dqiwFHlFTj9YVkkhqLDh1pUqsP5VOSbNUpvzEfUQ5GUcal72l97BYkc+K6QQuGL6mDPMt/upvZuX1r+M8IZGCOqZMBKWmPdOXPYvMUepFsTqd/KKtafKMQDwVWfU9Ff6BmlOf1mmRCbT5DIzpfZuNnGd+iEb5blvtmsd622zWVVM/RHzMxuwH1VrBt/sBAAA=
-  recorded_at: Fri, 05 Jun 2020 15:42:20 GMT
-- request:
-    method: post
-    uri: https://accounts.google.com/o/oauth2/token
-    body:
-      encoding: ASCII-8BIT
-      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJiZWFrZXItY29tcHV0ZUBiZWFrZXItY29tcHV0ZS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi90b2tlbiIsImV4cCI6MTU5MTM3MTgwMCwiaWF0IjoxNTkxMzcxNjgwLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZSJ9.xFPd0UOPdPO5dN0iBc03ULrQ6ok-GxL1yqA86RXwTI9wcgNgiTHxzHgp89eK8HRiulREsXl2fQ7yDdOxUxWQI-NJbiwR4yACKhidOzQtevxlGtXlkNRqlsGlMPiA0j3IhCYpTKahpyORNm8apc386ZOIHxzuKyBDRAM-mDOnshOPQnuhMdOysD7Z2JnN6x8gSbEYrnv8hTck85aCbX_ivTuTp3zD8u_ET-ePhwi1XDu4Br4dm5tSdf7qPHRXh3H4SQrZp0-Wq_H-6t2b4KdkdobbYdsIsL02JH7lRoNFD6PsqNrwlkcIJ03gl2gY_I7eEZcZgtvBvCf8yDVhKddyqQ
-    headers:
-      User-Agent:
-      - Faraday v0.17.3
-      Content-Type:
-      - application/x-www-form-urlencoded
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin
-      - Referer
-      - X-Origin
-      Date:
-      - Fri, 05 Jun 2020 15:42:24 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      Cache-Control:
-      - private
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: '{"access_token":"ya29.c.Ko8BzgdqBJhwi7Eq8lRwUdL-qHg2lwpIJVCIOf9JkmpL53HVh1R81TkL-LRIhuWgFnzDU15KiO9_yEEe4MqymR_F7hYUjKlTC6jBEAfdxyf39KIFiwdiosB3p3Pc_tI5svoB2mEwcp8EMOK2sbSVZQeanZmI1vYoFb9zWTA-gSbl1kCr11e-2SSHU2UZHeKAY2I","expires_in":3599,"token_type":"Bearer"}'
-  recorded_at: Fri, 05 Jun 2020 15:42:20 GMT
-- request:
-    method: delete
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-instance
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      User-Agent:
-      - Beaker/4.23.2 google-api-ruby-client/0.8.7 Mac OS X/10.14.6 (gzip)
-      Accept-Encoding:
-      - gzip
-      Content-Type:
-      - ''
-      Authorization:
-      - Bearer ya29.c.Ko8BzgdqBJhwi7Eq8lRwUdL-qHg2lwpIJVCIOf9JkmpL53HVh1R81TkL-LRIhuWgFnzDU15KiO9_yEEe4MqymR_F7hYUjKlTC6jBEAfdxyf39KIFiwdiosB3p3Pc_tI5svoB2mEwcp8EMOK2sbSVZQeanZmI1vYoFb9zWTA-gSbl1kCr11e-2SSHU2UZHeKAY2I
+      - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
       - no-store
       Accept:
@@ -138,7 +33,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Fri, 05 Jun 2020 15:42:25 GMT
+      - Mon, 24 Aug 2020 21:55:12 GMT
       Server:
       - ESF
       Cache-Control:
@@ -150,19 +45,19 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443";
+        ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/7VSy07DMBC89yuqcMXxI/EjOXFDlVAPqHyA6yzBJHGi2GkFiH8njxKpJw6oBx+8M56Z3fXXZruNbBHl2yhlkirKpGAJTbiSCY/uJ9TpBia87aDXwbYOUZ7RRFKZpilPENeSK3pUStMMkKZHnrGiQAyUEaaAReSzdbPIWwidzzE+n89x2bZlDbqzPjZtg8fTDQHwieKub9/BBI+PoCvo0S80qXg8eGTAhV7XFOlFfs12+OhmnwJqCBfvoPsSwpN11U0S4ML6aiWGpkPW+aCdubLfzTMWGSVCJTIRQmVKMEbUQhofhMFPlOeX/X63f1zKg4d+Kl6neLi+xlY3cTkyT9aANqYdXJj6WSTGTsoe/KRN5sKYDvpwsMtWGWEEEYEIPxCVpyxnaazSDBGZE7Jm+4PPxRUf6tfbTXtdtcf/+pGVdfNKLl53q1i0+d78AH1YzkEXAwAA
-  recorded_at: Fri, 05 Jun 2020 15:42:22 GMT
+        H4sIAAAAAAAC/7VSy07DMBC89yuqcMXxK06cnLihSqgHVD7ATbbBpLWj2GkFiH8njiGiJw6Igy15djQzu+v31Xqd6Cap1klOpeCEy6zMsyxjRV6K5DaUjTpBINgeBuW1NYiKUnKSU8oop0ioRuUqIyCIAERzEPLAa1SQnLF9w6LImzWzyLP3vaswvlwuaWttewTVa5fW9oSn048e8JnifrAvUHuH96A6GNB3Kag4PDpUg/GDOlKkovySbffazz4NHMFDLHo1tOAftOn+JQFutOsWYjRGAfvpvplnzKcZs0KSQvDpKoUURSQ5r/zoAuXxabvdbO8jPDoYAngd4u76mWp1StuJedY1qLq2o/GhnSgxNdIO4II2mQFtJqrf6bhURhhBRCKW7WhWCVFRlvJCIFJUhCzZfuFLdsWH4+H/hr1s2uE/fchOm3klX143i1iy+lh9Ag/BdmYXAwAA
+  recorded_at: Mon, 24 Aug 2020 21:53:40 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-tmp-instance
+    uri: https://compute.googleapis.com/compute/v1/projects/beaker-compute/zones/us-central1-a/disks/beaker-delete-disk
     body:
       encoding: UTF-8
       string: ''
@@ -174,7 +69,7 @@ http_interactions:
       Content-Type:
       - ''
       Authorization:
-      - Bearer ya29.c.Ko8BzgdqBJhwi7Eq8lRwUdL-qHg2lwpIJVCIOf9JkmpL53HVh1R81TkL-LRIhuWgFnzDU15KiO9_yEEe4MqymR_F7hYUjKlTC6jBEAfdxyf39KIFiwdiosB3p3Pc_tI5svoB2mEwcp8EMOK2sbSVZQeanZmI1vYoFb9zWTA-gSbl1kCr11e-2SSHU2UZHeKAY2I
+      - Bearer ya29.c.Ko8B2QcRpAOp3Ncn3LDVKhNHQTPUgfxudx5B0d9kVpPQazyWu431KFpc3fQq93hjN6ZTH7jMuEOkrW-J4VA4RLLOAxXi-hsaN8Zhi_6fA-96roT15ffYpOyiKbcEwIrWZsC2roLbqLyQP3cM91kCmbpZFlGvG2uQ4jHQ6aAbgL3NLXfIzMk-Jm7BmjOHHo44uBE
       Cache-Control:
       - no-store
       Accept:
@@ -193,7 +88,7 @@ http_interactions:
       Content-Encoding:
       - gzip
       Date:
-      - Fri, 05 Jun 2020 15:42:25 GMT
+      - Mon, 24 Aug 2020 21:55:13 GMT
       Server:
       - ESF
       Cache-Control:
@@ -205,14 +100,14 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
-        ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3-29=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443";
+        ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443";
+        ma=2592000; v="46,43"
       Transfer-Encoding:
       - chunked
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/8WOQQ6CQAxF95yiYcNGgiasPIAncGdclJmKCExJOxMTCXd3GInxBq7a/3+b9+cMICcRlvwIcxRRGrYUVb2vdx9jJFVsVy8/3wmElIMYgmISfpDxWjWEPUlpeJyCp+rFjrQKWhpyXnA4lFjZTvvvoR+nsnPq0Rkq4IkKjj3cODibb9BUSiPzkjRs7f5WKIEtj9i5ldsO3ODwmwmhcsri6yl9buGS5jVbtyV7A1FuGTRzAQAA
-  recorded_at: Fri, 05 Jun 2020 15:42:22 GMT
+        H4sIAAAAAAAC/8WOMQ7CMAxF957C6tKFqCB14gCcgA0xpIkppW1c2YmQqHp3klAhbsBkv/9t/b8UACUyE5dHWCJENGQxUrNvdh9hQhHdJa083xEYhQIbhGpmeqDxUreoB2RlaJqDx/pFDqUOogw6z3o8KF3bXobvocURPaqkVfDUAo483Cg4W26ZuZPEyEtm2Mr9q0/OtTTp3qXYbqRWj78eoxbKXnw95c/NXPO8FmlbizcgHYq/cQEAAA==
+  recorded_at: Mon, 24 Aug 2020 21:53:40 GMT
 recorded_with: VCR 6.0.0
