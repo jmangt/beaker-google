@@ -738,4 +738,55 @@ describe Beaker::GoogleComputeHelper, focus: true do
       end
     end
   end
+
+  # {
+  #   :api_method => #<Google::APIClient::Method:0x3fccfb9d1504 ID:compute.firewalls.delete>,
+  #   :parameters => {"firewall"=>"beaker-tmp-instance", "project"=>"beaker-compute", "zone"=>"us-central1-a"},
+  # }
+  describe '#firewall_delete_req' do
+    let(:name) { 'beaker-tmp-instance' }
+
+    it 'retuns a firewall deletion request hash object' do
+      g = gch
+      VCR.use_cassette('google_compute_helper/firewall_delete_req', match_requests_on: %i[method uri body]) do
+        expect(g.firewall_delete_req(name)).to be_kind_of(Hash)
+      end
+    end
+  end
+
+  # {:api_method=>#<Google::APIClient::Method:0x3fe0923c0f48 ID:compute.firewalls.list>, :parameters=>{"project"=>"beaker-compute", "zone"=>"us-central1-a"}}
+  describe '#firewall_list_req' do
+    it 'Creates a request for listing all firewall in a project' do
+      request = gch.firewall_list_req
+      expect(request).to be_kind_of(Hash)
+    end
+  end
+
+  # {:api_method=>#<Google::APIClient::Method:0x3fde9c1d4010 ID:compute.networks.get>, :parameters=>{"network"=>"default", "project"=>"beaker-compute", "zone"=>"us-central1-a"}}
+  describe "#network_get_req" do
+    let(:name) { 'default' }
+
+    it 'Creates a Google Compute get network request' do
+      request = gch.network_get_req(name)
+      expect(request).to be_kind_of(Hash)
+    end
+  end
+
+  # {:api_method=>#<Google::APIClient::Method:0x3fece20fb4f0 ID:compute.zoneOperations.get>, :parameters={ "name"=>"operation-1591366017070-...", "project"=>"beaker-compute", "zone"=>"us-central1-a"}}
+  describe "#operation_get_req" do
+    let(:zone_operation_name) { 'operation-1591366017070-...' }
+
+    it 'Creates a Google Compute zone operation request' do
+      request = gch.operation_get_req(zone_operation_name)
+      expect(request).to be_kind_of(Hash)
+    end
+  end
+
+  # {:api_method=>#<Google::APIClient::Method:0x3ff636a0bc54 ID:compute.instances.list>, :parameters=>{"project"=>"beaker-compute", "zone"=>"us-central1-a"}}
+  describe '#instance_list_req' do
+    it 'Creates a Google Comput list instance request' do
+      request = gch.instance_list_req
+      expect(request).to be_instance_of(Hash)
+    end
+  end
 end
