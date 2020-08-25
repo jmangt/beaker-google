@@ -8,6 +8,8 @@ require 'vcr'
 require 'helpers'
 require 'mocks'
 
+SimpleCov.start
+
 # load beaker-google lib files
 Dir.glob(Dir.pwd + '/lib/beaker/hypervisor/*.rb').sort.each { |file| require file }
 

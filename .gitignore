@@ -25,3 +25,5 @@ doc
 .vagrant_files/
 *.log
 .rspec_status
+# SimpleCov reports
+coverage

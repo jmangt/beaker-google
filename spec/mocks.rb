@@ -13,6 +13,15 @@ module FSMocks
     end
     allow(Google::APIClient::PKCS12).to receive(:load_key).and_return('ABC123')
   end
+
+  def stub_ssh_public_key
+    gce_dir = File.join(ENV['HOME'], '.ssh')
+    keyfile = File.join(gce_dir, 'google_compute_engine.pub')
+    FileUtils.mkdir_p(gce_dir)
+    File.open(keyfile, 'w') do |file|
+      file.puts('ABC123')
+    end
+  end
 end
 
 module GoogleApiMocks
