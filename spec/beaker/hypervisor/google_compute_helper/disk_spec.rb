@@ -133,7 +133,7 @@ describe Beaker::GoogleComputeHelper do
       VCR.use_cassette('google_compute_helper/create_disk_before', match_requests_on: %i[method uri]) do
         gch.delete_disk(name, start, attempts)
       end
-    rescue
+    rescue StandardError
       puts "[WARN] #{name} object not found"
     end
 
@@ -141,7 +141,7 @@ describe Beaker::GoogleComputeHelper do
       VCR.use_cassette('google_compute_helper/create_disk_after', match_requests_on: %i[method uri]) do
         gch.delete_disk(name, start, attempts)
       end
-    rescue
+    rescue StandardError
       puts "[WARN] #{name} object not found"
     end
 
@@ -182,7 +182,7 @@ describe Beaker::GoogleComputeHelper do
       VCR.use_cassette('google_compute_helper/delete_disk_before', match_requests_on: %i[method uri]) do
         gch.create_disk(name, img, start, attempts)
       end
-    rescue
+    rescue StandardError
       puts "[WARN] #{name} object already exists"
     end
 

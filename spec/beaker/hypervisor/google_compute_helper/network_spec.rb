@@ -46,7 +46,6 @@ describe Beaker::GoogleComputeHelper do
     ENV['BEAKER_gce_keyfile'] = nil
   end
 
-
   describe '#default_zone' do
     it 'returns default zone for requests' do
       expect(gch.default_zone).to eql 'https://www.googleapis.com/compute/v1/projects/beaker-compute/global/zones/us-central1-a'

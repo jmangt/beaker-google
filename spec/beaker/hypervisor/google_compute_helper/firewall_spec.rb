@@ -46,7 +46,6 @@ describe Beaker::GoogleComputeHelper do
     ENV['BEAKER_gce_keyfile'] = nil
   end
 
-
   # {
   #   "id" => "3461028139834688623",
   #   "insertTime" => "2020-06-03T12:31:12.257-07:00",

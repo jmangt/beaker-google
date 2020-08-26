@@ -69,7 +69,6 @@ describe Beaker::GoogleComputeHelper do
     end
   end
 
-
   # {:api_method=>#<Google::APIClient::Method:0x3fddb58b9854 ID:compute.images.list>, :parameters=>{"project"=>"beaker-compute"}}
   describe '#image_list_req' do
     let(:request) do
